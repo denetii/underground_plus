@@ -1,0 +1,2 @@
+	script SetUpBasicLights
+	endscript
