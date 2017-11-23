@@ -169,11 +169,15 @@
 		{Trigger = {InOrder, a = Square, b = Square, 300} Scr = Trick_Smith_BS Params = {Name = 'BS Smith' IsExtra = yes}}
 		{Trigger = {InOrder, Square, Circle, 300} Scr = Trick_5_0_BS Params = {Name = 'BS 5-0' IsExtra = yes}}
 	]
-	GrindRelease =
-	[
+    // Dropdown trick bindings for PS2/Xbox controls
+	GrindRelease = [
 		{Trigger = {Press, Black, 100} Scr = SkateInOrBail Params = {GrindRelease GrindBail = Airborne moveright = -5 movey = 5}}
 	]
-	GRINDTAP_TIME = 1000
+	GrindRelease_XBOX =	[ 
+        {Trigger = {PressTwoAnyOrder, L1, R1, 300} Scr = SkateInOrBail Params = {GrindRelease GrindBail = Airborne moveright = -5 movey = 5}} 
+    ]
+	
+    GRINDTAP_TIME = 1000
 	GRINDTAP_SCORE = 400
 	GRINDTAP_TWEAK = 25
 	GrindTaps_FS = [
@@ -329,7 +333,12 @@
 		endif
 		
 		Wait 15 frames
-		SetExtraTricks GrindRelease
+        // Set the dropdown trick with either PS2 or Xbox style triggers
+        if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
+            SetExtraTricks GrindRelease
+        else
+            SetExtraTricks GrindRelease_XBOX
+        endif
 		Wait 1 frame
 		if GotParam IsSpecial
 			LaunchSpecialMessage text = "Special Grind"
@@ -375,15 +384,17 @@
 			Wait 0.25 seconds
 		endif
 		if GotParam Extratricks
-			if NOT IsPs2
-				SetExtraTricks <Extratricks> ignore = <Name> GrindRelease
-			else
-				SetExtraTricks <Extratricks> ignore = <Name>
-			endif
+            if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
+                SetExtraTricks <Extratricks> ignore = <Name> GrindRelease
+            else
+                SetExtraTricks <Extratricks> ignore = <Name> GrindRelease_XBOX
+            endif
 		else
-			if NOT IsPs2
-				SetExtraTricks GrindRelease
-			endif
+            if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
+                SetExtraTricks GrindRelease
+            else
+                SetExtraTricks GrindRelease_XBOX
+            endif
 		endif
 		if GotParam ScreenShake
 			Grind_ScreenShake ScreenShake = <ScreenShake>

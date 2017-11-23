@@ -18,10 +18,16 @@
 	Trick_Boneless = {Scr = Boneless Params = {Name = 'Boneless' Anim = Boneless Score = 250}}
 	Trick_Fastplant = {Scr = Boneless Params = {Name = 'Fastplant' Anim = Fastplant Score = 250}}
 	Trick_Beanplant = {Scr = Boneless Params = {Name = 'Beanplant' Anim = Beanplant Score = 250}}
-	GroundTricks =
+	
+    // Eventually I will make this a control option!
+    // but no one liked the new powerslide control setting so I changed it back
+    Trigger_PowerSlide_OLD = {TripleInOrder, a = Down, b = Down, Black, 333}
+	Trigger_PowerSlide_NEW = {InOrder, a = L1, b = L1, 300}
+    Trigger_PowerSlide = Trigger_PowerSlide_OLD
+    GroundTricks =
 	[
-		{Trigger = {InOrder, a = L1, b = L1, 300} Scr = ToggleSwitchRegular Params = {PowerSlide}}
-		{Trigger = {TripleInOrder, a = Down, b = Down, Black, 333} Scr = KskBigBrake}
+		{Trigger = Trigger_PowerSlide Scr = ToggleSwitchRegular Params = {PowerSlide}}
+		{Trigger = {TripleInOrder, a = Down, b = Down, Triangle, 333} Scr = KskBigBrake}
 		{Trigger = {PressAndRelease, Up, X, 300} Scr = NoComply Params = {Name = 'No Comply' Score = 100}}
 		{Trigger = {TripleInOrder, a = L1, b = L1, Triangle, 500} Scr = Props Params = {string_id = props_string}}
 		{Trigger = {TripleInOrder, a = L1, b = L1, Square, 500} Scr = Taunt Params = {Anim = Taunt1 string_id = your_daddy_string}}
@@ -32,8 +38,8 @@
 	]
 	GroundTricks_XBOX =
 	[
-		{Trigger = {InOrder, a = L1, b = L1, 300} Scr = ToggleSwitchRegular Params = {PowerSlide}}
-		{Trigger = {TripleInOrder, a = Down, b = Down, R1, 333} Scr = KskBigBrake}
+		{Trigger = Trigger_PowerSlide Scr = ToggleSwitchRegular Params = {PowerSlide}}
+		{Trigger = {TripleInOrder, a = Down, b = Down, Triangle, 333} Scr = KskBigBrake}
 		{Trigger = {PressAndRelease, Up, X, 300} Scr = NoComply Params = {Name = 'No Comply' Score = 100}}
 		{Trigger = {TripleInOrder, a = L1, b = L1, Triangle, 500} Scr = Props Params = {string_id = props_string}}
 		{Trigger = {TripleInOrder, a = L1, b = L1, Square, 500} Scr = Taunt Params = {Anim = Taunt1 string_id = your_daddy_string}}

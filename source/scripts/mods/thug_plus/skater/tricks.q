@@ -58,7 +58,7 @@
 						if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
 							SetQueueTricks special = SpecialTricks PressureTricks2 AirTricks SkateToWalkTricks
 						else
-							SetQueueTricks special = SpecialTricks PressureTricks2 AirTricks SkateToWalkTricks
+							SetQueueTricks special = SpecialTricks PressureTricks2 AirTricks SkateToWalkTricks_XBOX
 							
 						endif
 					else
