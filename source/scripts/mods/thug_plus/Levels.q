@@ -601,7 +601,9 @@
 			script_reset_tod
 		else
 			printf "KSK: script_change_tod"
-			script_change_tod tod_action = set_tod_startup is_local = 1
+            // This reverts the light settings to default, wiping away all the settings in 
+            // the level struct. No idea why NS used this!
+			//script_change_tod tod_action = set_tod_startup is_local = 1
 			
 			if NOT gotparam park_editor
 				if NOT InNetGame
@@ -611,7 +613,10 @@
 				endif
 			endif
 			if gotparam desired_tod
-				script_change_tod tod_action = <desired_tod> is_local = 1
+                if desired_tod = tod_null
+                else
+                    script_change_tod tod_action = <desired_tod> is_local = 1
+                endif
 			endif
 		endif
 		if NOT gotparam park_editor
@@ -837,6 +842,18 @@
 	script Load_devlevel
 		load_level Level_devlevel
 	endscript
+    script Load_UP_VC 
+        load_level Level_UP_VC 
+    endscript 
+    script Load_UP_Alc 
+        load_level Level_UP_Alc 
+    endscript 
+    script Load_HD_VN 
+        load_level Level_HD_VN 
+    endscript 
+    script Load_HD_CA 
+        load_level Level_HD_CA 
+    endscript 
 	
 	
 	script Load_TH2_Han
@@ -2076,6 +2093,9 @@
 		num_m_legs = 4
 	}
 	
+    // ---------------------------------------------------
+    // - THPS2 Skate Heaven
+    // ---------------------------------------------------
 	Level_Hvn = {
 		structure_name = Level_Hvn
 		load_script = Load_Hvn
@@ -2117,6 +2137,142 @@
 		num_m_legs = 4
 	}
 	
+    // ---------------------------------------------------
+    // - Underground+ THPS4 Alcatraz!
+    // ---------------------------------------------------
+    Level_UP_Alc = {
+        structure_name = Level_UP_Alc 
+        load_script = Load_UP_Alc 
+        name = "* Alcatraz+" 
+        loading_screen = "loadscrn_generic" 
+        loading_time = 8.5 
+        level = "UP_Alc" 
+        sky = "UP_Alc_Sky" 
+        pre = "NY.pre" 
+        qb = "levels\UP_Alc\UP_Alc.qb" 
+        pedpre = "NYped.pre" 
+        level_qb = "levels\UP_Alc\UP_Alc_scripts.qb" 
+        level_sfx_qb = "levels\UP_Alc\UP_Alc_sfx.qb" 
+        startup_script = DevLevel_Startup 
+        setup_script = DevLevel_setup 
+        default_stats = 5 
+        level_number = LevelNum_Default 
+        desired_tod = tod_null 
+        ambient_red = 30 
+        ambient_green = 20 
+        ambient_blue = 20 
+        ambient_mod_factor = 0.200000002980232 
+        heading_0 = 140 
+        pitch_0 = 0 
+        red_0 = 136 
+        green_0 = 120 
+        blue_0 = 110 
+        mod_factor_0 = 0 
+        heading_1 = 0 
+        pitch_1 = 0 
+        red_1 = 72 
+        green_1 = 70 
+        blue_1 = 66 
+        mod_factor_1 = 0 
+        fog_red = 0 
+        fog_green = 0 
+        fog_blue = 0 
+        fog_alpha = 0 
+        fog_dist = 0 
+        num_m_heads = 4 
+        num_m_torsos = 4 
+        num_m_legs = 4 
+    }
+
+    Level_HD_VN = {
+        structure_name = Level_HD_VN 
+        load_script = Load_HD_VN 
+        name = "* Venice HD+" 
+        loading_screen = "loadscrn_generic" 
+        loading_time = 8.5 
+        level = "HD_VN" 
+        sky = "HD_VN_Sky" 
+        pre = "NY.pre" 
+        qb = "levels\HD_VN\HD_VN.qb" 
+        pedpre = "NYped.pre" 
+        level_qb = "levels\HD_VN\HD_VN_scripts.qb" 
+        level_sfx_qb = "levels\HD_VN\HD_VN_sfx.qb" 
+        startup_script = DevLevel_Startup 
+        setup_script = DevLevel_setup 
+        default_stats = 5 
+        level_number = LevelNum_Default 
+        desired_tod = tod_null 
+        ambient_red = 32 
+        ambient_green = 21 
+        ambient_blue = 20 
+        ambient_mod_factor = 0 
+        heading_0 = 352 
+        pitch_0 = 350 
+        red_0 = 104 
+        green_0 = 101 
+        blue_0 = 60 
+        mod_factor_0 = 0.200000002980232 
+        heading_1 = 100 
+        pitch_1 = 350 
+        red_1 = 45 
+        green_1 = 42 
+        blue_1 = 38 
+        mod_factor_1 = 0.200000002980232 
+        fog_red = 0 
+        fog_green = 0 
+        fog_blue = 0 
+        fog_alpha = 0 
+        fog_dist = 0 
+        num_m_heads = 4 
+        num_m_torsos = 4 
+        num_m_legs = 4 
+    }
+    Level_HD_CA = { 
+        structure_name = Level_HD_CA 
+        load_script = Load_HD_CA 
+        name = "* Canada HD+" 
+        loading_screen = "loadscrn_generic" 
+        loading_time = 8.5 
+        level = "HD_CA" 
+        sky = "HD_CA_Sky" 
+        pre = "NY.pre" 
+        qb = "levels\HD_CA\HD_CA.qb" 
+        pedpre = "NYped.pre" 
+        level_qb = "levels\HD_CA\HD_CA_scripts.qb" 
+        level_sfx_qb = "levels\HD_CA\HD_CA_sfx.qb" 
+        startup_script = DevLevel_Startup 
+        setup_script = DevLevel_setup 
+        default_stats = 5 
+        level_number = LevelNum_Default 
+        ambient_red = 32 
+        ambient_green = 21 
+        ambient_blue = 20 
+        ambient_mod_factor = 0 
+        heading_0 = 352 
+        pitch_0 = 350 
+        red_0 = 104 
+        green_0 = 101 
+        blue_0 = 60 
+        mod_factor_0 = 0.200000002980232 
+        heading_1 = 100 
+        pitch_1 = 350 
+        red_1 = 45 
+        green_1 = 42 
+        blue_1 = 38 
+        mod_factor_1 = 0.200000002980232 
+        fog_red = 0 
+        fog_green = 0 
+        fog_blue = 0 
+        fog_alpha = 0 
+        fog_dist = 0 
+        num_m_heads = 4 
+        num_m_torsos = 4 
+        num_m_legs = 4 
+    } 
+    
+    // ---------------------------------------------------
+    // - Development Level (use when working on a map)
+    // ---------------------------------------------------
 	Level_devlevel = {
 		structure_name = Level_devlevel
 		load_script = Load_devlevel

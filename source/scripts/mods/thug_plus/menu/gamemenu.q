@@ -2640,29 +2640,41 @@
 			<pad_choose_params> = <...>
 			<locked> = 0
 		else
-			if NOT GotParam cross_it_out
-				printf <flag>
-				<rgba> = <unhighlighted_color>
-				alpha = 1.0
-				if (<level_num> = <created_park_number>)
-					<pad_choose_script> = level_select_created_park_menu
-				else
-					if (in_server_options = 1)
-						<pad_choose_script> = level_select_menu_exit
-					else
-						<pad_choose_script> = level_select_change_level
-					endif
-				endif
-				<pad_choose_params> = <...>
-				<locked> = 0
-			else
-				<rgba> = [47 42 38 128]
-				alpha = 0.5
-				not_focusable = not_focusable
-				
-				<pad_choose_script> = level_select_invalid_choice
-				<locked> = 1
-			endif
+            // New parameter for UG+ which displays the level but is not selectable
+            // used for placeholders to hint at upcoming level releases
+            if GotParam cross_it_out
+                <rgba> = [47 42 38 128]
+                alpha = 0.5
+                not_focusable = not_focusable
+                <pad_choose_script> = level_select_invalid_choice
+                <locked> = 1
+            else
+                // If this level is unlocked, show it normally...
+                if GetGlobalFlag flag = <flag> 
+                    printf <flag>
+                    <rgba> = <unhighlighted_color>
+                    alpha = 1.0
+                    if (<level_num> = <created_park_number>)
+                        <pad_choose_script> = level_select_created_park_menu
+                    else
+                        if (in_server_options = 1)
+                            <pad_choose_script> = level_select_menu_exit
+                        else
+                            <pad_choose_script> = level_select_change_level
+                        endif
+                    endif
+                    <pad_choose_params> = <...>
+                    <locked> = 0
+                else
+                    // ...otherwise, make it completely hidden
+                    <rgba> = [47 42 38 128]
+                    alpha = 0.5
+                    not_focusable = not_focusable
+                    text = "??????????"
+                    <pad_choose_script> = level_select_invalid_choice
+                    <locked> = 1
+                endif
+            endif
 		endif
 		CreateScreenElement {
 			type = ContainerElement

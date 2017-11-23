@@ -37,7 +37,7 @@
 		{text = "Suburbia" cross_it_out = 90 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_sub}
 		{text = "Airport" cross_it_out = 90 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_ap}
 		{text = "Los Angeles" devbuild = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_la}
-		{text = "Skater Island" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_si}
+		{text = "Skater Island" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_th3_si}
 		{text = "Tokyo" cross_it_out = 90 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_tok}
 		{text = "Cruise Ship" cross_it_out = 90 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_ship}
 		{text = "Paris" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_par}
@@ -120,7 +120,7 @@
 		{text = "Foo" devbuild = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_foo}
 	]
 	THUGPLUS_LEVELS_THUGPLUS = [
-		{text = "*Blackwell" cross_it_out = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_bw}
+		{text = "*Blackwell" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_bw}
 		{text = "*Dev Level" devbuild = 1 offline_only = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_devlevel}
 		{text = "Sk5Ed1 Shell" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed1_shell}
 		{text = "Sk5Ed2 Shell" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed2_shell}
@@ -131,7 +131,11 @@
 		{text = "*Tampa+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_fl}
 		{text = "*San Diego+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_sd}
 		{text = "*Hawaii+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_hi}
+		{text = "*Vancouver+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_VC}
 		{text = "*School II+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_UP_SC2}
+		{text = "*Alcatraz+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_UP_Alc}
+		{text = "*Venice HD+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_HD_VN}
+		{text = "*Canada HD+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_HD_CA}
 		
 	]
 	
