@@ -25,7 +25,7 @@
 		{name = "Flower Cart" model = "veh\veh_sdkart_gardens\veh_sdkart_gardens.mdl" skeletonName = car fixdisplay = 1}
 		{name = "NY Test" model = "veh\ny\Veh_WRX_BB\Veh_WRX_BB.mdl"}
 		{name = "Hawaii Bus" model = "veh\hi\Veh_Bus_HI\Veh_Bus_HI.mdl" skeletonName = car type = Bus fixdisplay = 1}
-		{name = "DC Truck" model = "veh\Veh_DCTruck\Veh_DCTruck.mdl" skeletonName = car fixdisplay = 1}
+		{name = "DC Truck" model = "veh\Veh_DCShoeTruck\Veh_DCShoeTruck.mdl" skeletonName = car fixdisplay = 1}
 		{name = "Tank" model = "veh\ru\Veh_Tank_RU\Veh_Tank_RU.mdl"}
 		{name = "Tank Turret" model = "veh\ru\Veh_TankTurret_RU\Veh_TankTurret_RU.mdl"}
 		{name = "Custom" model = "veh\veh_custom\veh_custom.mdl" skeletonName = car}

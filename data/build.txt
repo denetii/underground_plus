@@ -64,7 +64,7 @@
 \scripts\game\sk4_PedVO.qb
 \scripts\game\skeleton.qb
 \scripts\game\skutils.qb
-\scripts\game\startup.qb
+\scripts\mods\thug_plus\startup.qb
 \scripts\game\terrain.qb
 \scripts\game\goals\goal_cat.qb
 \scripts\game\goals\goal_collect.qb
