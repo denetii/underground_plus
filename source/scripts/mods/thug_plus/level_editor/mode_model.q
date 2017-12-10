@@ -22,6 +22,7 @@
 		{name = "Aus HP" model = "UndergroundPlus\Aus_HP\Aus_HP.mdl"}
 		{name = "Boston Spine" model = "UndergroundPlus\Boston_Spine\Boston_Spine.mdl"}
 		{name = "LA Fountain" model = "UndergroundPlus\LA_Fountain\LA_Fountain.mdl"}
+		{name = "HD Plane" model = "UndergroundPlus\HD_Plane\HD_Plane.mdl" }
 		{name = "Flower Cart" model = "veh\veh_sdkart_gardens\veh_sdkart_gardens.mdl" skeletonName = car fixdisplay = 1}
 		{name = "NY Test" model = "veh\ny\Veh_WRX_BB\Veh_WRX_BB.mdl"}
 		{name = "Hawaii Bus" model = "veh\hi\Veh_Bus_HI\Veh_Bus_HI.mdl" skeletonName = car type = Bus fixdisplay = 1}
@@ -255,7 +256,14 @@
 	script LevelEditor_Model_Square
 		increment_model_id = (selected_model + 1)
 		LevelEditor_Model_SetModel model_id = <increment_model_id>
-		ControllerDebounce Square time = 0.2 clear = 1
+        // ALERT: BAD HACK! 
+        // I wasn't able to completely swap the Square/R2 button assignments in the OBS exe, 
+        // so we have to change ControllerPressed calls in scripts. Woohoo!
+        if (LAUNCHER_SETTING_OBSHACK = 1)
+            ControllerDebounce Black time = 0.2 clear = 1
+        else
+            ControllerDebounce Square time = 0.2 clear = 1
+        endif
 	endscript
 	
 	script LevelEditor_Model_Circle

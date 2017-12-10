@@ -212,20 +212,42 @@
 						LevelEditor_Ped_X
 				endswitch
 			endif
-			if ControllerPressed Square
-				switch le_current_mode
-					case LE_MODE_MODEL
-						LevelEditor_Model_Square
-					case LE_MODE_GEOM
-						LevelEditor_Geom_Square
-					case LE_MODE_RAIL
-						LevelEditor_Rail_Square
-					case LE_MODE_LIGHT
-						LevelEditor_Light_Square
-					case LE_MODE_PED
-						LevelEditor_Ped_Square
-				endswitch
-			endif
+            // ALERT: BAD HACK! 
+            // I wasn't able to completely swap the Square/R2 button assignments in the OBS exe, 
+            // so we have to change ControllerPressed calls in scripts. Woohoo!
+            if (LAUNCHER_SETTING_OBSHACK = 1)
+                //printf "Found OBS hack"
+                if ControllerPressed Black
+                    switch le_current_mode
+                        case LE_MODE_MODEL
+                            LevelEditor_Model_Square
+                        case LE_MODE_GEOM
+                            LevelEditor_Geom_Square
+                        case LE_MODE_RAIL
+                            LevelEditor_Rail_Square
+                        case LE_MODE_LIGHT
+                            LevelEditor_Light_Square
+                        case LE_MODE_PED
+                            LevelEditor_Ped_Square
+                    endswitch
+                endif
+            else
+                if ControllerPressed Square
+                    switch le_current_mode
+                        case LE_MODE_MODEL
+                            LevelEditor_Model_Square
+                        case LE_MODE_GEOM
+                            LevelEditor_Geom_Square
+                        case LE_MODE_RAIL
+                            LevelEditor_Rail_Square
+                        case LE_MODE_LIGHT
+                            LevelEditor_Light_Square
+                        case LE_MODE_PED
+                            LevelEditor_Ped_Square
+                    endswitch
+                endif
+            endif
+            // END BAD HACK
 			if ControllerPressed Circle
 				switch le_current_mode
 					case LE_MODE_MODEL

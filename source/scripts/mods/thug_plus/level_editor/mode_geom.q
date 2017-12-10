@@ -297,7 +297,14 @@
 	script LevelEditor_Geom_Square
 		LevelEditor_Geom_RemoveHighlight
 		LevelEditor_Geom_NextLevelObject
-		ControllerDebounce Square time = 0.2 clear = 1
+        // ALERT: BAD HACK! 
+        // I wasn't able to completely swap the Square/R2 button assignments in the OBS exe, 
+        // so we have to change ControllerPressed calls in scripts. Woohoo!
+        if (LAUNCHER_SETTING_OBSHACK = 1)
+            ControllerDebounce Black time = 0.2 clear = 1
+        else
+            ControllerDebounce Square time = 0.2 clear = 1
+        endif
 	endscript
 	
 	script LevelEditor_Geom_Circle

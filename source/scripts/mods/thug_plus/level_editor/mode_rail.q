@@ -180,7 +180,14 @@
 	script LevelEditor_Rail_Square
 		increment = (le_rail_cur_terrain + 1)
 		LevelEditor_Rail_SetTerrain index = <increment>
-		ControllerDebounce Square time = 0.2 clear = 1
+        // ALERT: BAD HACK! 
+        // I wasn't able to completely swap the Square/R2 button assignments in the OBS exe, 
+        // so we have to change ControllerPressed calls in scripts. Woohoo!
+        if (LAUNCHER_SETTING_OBSHACK = 1)
+            ControllerDebounce Black time = 0.2 clear = 1
+        else
+            ControllerDebounce Square time = 0.2 clear = 1
+        endif
 	endscript
 	
 	script LevelEditor_Rail_Circle
