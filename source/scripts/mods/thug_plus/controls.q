@@ -15,6 +15,9 @@
 	endscript
 	
 	script UndergroundPlus_IfPressedExitBoard
+        if (UNDERGROUNDPLUS_ENABLE_EXITBOARD = UNDERGROUNDPLUS_OPTION_OFF)
+            return ksk_is_held = 0
+        endif
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
 			if Held White
 				if Held Black

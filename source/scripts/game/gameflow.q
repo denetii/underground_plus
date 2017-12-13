@@ -178,6 +178,10 @@
 			SetActiveCamera id = parked_cam
 		endif
 		create_menu_camera
+        // Bug fix: Previously, if you were missing a board and changed levels, you'd be stuck without a board!
+        if skater::IsBoardMissing
+            skater::ReturnBoardToSkater
+        endif
 	endscript
 	dont_restore_start_key_binding = 0
 	show_career_startup_menu = 1

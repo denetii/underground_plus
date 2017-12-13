@@ -81,6 +81,7 @@
 			level1 = []
 		}
 		undergroundplus_controls = {ui_string = "Xbox"}
+		undergroundplus_enable_exitboard = {ui_string = "On"}
 	}
 	
 	

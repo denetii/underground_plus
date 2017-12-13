@@ -335,20 +335,24 @@
 	endscript
 	
 	script kskOffBoard_FromGround
-		ClearTrickQueue
-		ClearEventBuffer Buttons = Dpad OlderThan = TRICK_PRELOAD_TIME
-		ClearEventBuffer Buttons = [x] OlderThan = 0
-		
-		ClearExceptions
-		LaunchStateChangeEvent State = Skater_InAir
-		SetExtraTricks NoTricks
-		SetQueueTricks NoTricks
-		
-		TakeBoardFromSkater
-		CreateExitBoard vel = (0.0,0.0,0.0) rotvel = (10.0,0.0,2.0) object_vel_factor = 0.0
-		Jump BonelessHeight
-		PlayAnim Anim = Ollie BlendPeriod = 0.2 NoRestart
-		Goto kskOffBoard_Air
+        if (UNDERGROUNDPLUS_ENABLE_EXITBOARD = UNDERGROUNDPLUS_OPTION_OFF)
+            Goto OnGroundAi
+        else
+            ClearTrickQueue
+            ClearEventBuffer Buttons = Dpad OlderThan = TRICK_PRELOAD_TIME
+            ClearEventBuffer Buttons = [x] OlderThan = 0
+            
+            ClearExceptions
+            LaunchStateChangeEvent State = Skater_InAir
+            SetExtraTricks NoTricks
+            SetQueueTricks NoTricks
+            
+            TakeBoardFromSkater
+            CreateExitBoard vel = (0.0,0.0,0.0) rotvel = (10.0,0.0,2.0) object_vel_factor = 0.0
+            Jump BonelessHeight
+            PlayAnim Anim = Ollie BlendPeriod = 0.2 NoRestart
+            Goto kskOffBoard_Air
+        endif
 	endscript
 	
 	script kskOffBoard_Air BlendPeriod = 0.30000001
