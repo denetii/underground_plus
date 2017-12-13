@@ -112,31 +112,31 @@
 		{text = "...Maybe" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_VC level = load_pg_test2}
 	]
 	THUGPLUS_LEVELS_BETA = [
+        {text = "*Dev Level" devbuild = 1 offline_only = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_devlevel}
 		{text = "School (UG1 Beta)" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_SC}
 		{text = "Philly (UG1 Beta)" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_PH}
 		{text = "Downhill Jam (UG1 Beta)" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_DJ}
 		{text = "Test Level (UG1)" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_TestLevel}
 		{text = "CAS Bedroom" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SCH level = load_WWW}
 		{text = "Foo" devbuild = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_foo}
-	]
-	THUGPLUS_LEVELS_THUGPLUS = [
-		{text = "*Blackwell" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_bw}
-		{text = "*Dev Level" devbuild = 1 offline_only = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_devlevel}
+        
 		{text = "Sk5Ed1 Shell" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed1_shell}
 		{text = "Sk5Ed2 Shell" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed2_shell}
 		{text = "Sk5Ed3 Shell" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed3_shell}
 		{text = "Sk5Ed4 Shell" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed4_shell}
 		{text = "Sk5Ed5 Shell" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed5_shell}
+	]
+	THUGPLUS_LEVELS_THUGPLUS = [
+		{text = "*Venice HD+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_HD_VN}
+		{text = "*Blackwell" cross_it_out = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_bw}
 		{text = "*Manhattan+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_ny}
 		{text = "*Tampa+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_fl}
 		{text = "*San Diego+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_sd}
 		{text = "*Hawaii+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_hi}
-		{text = "*Vancouver+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_VC}
+		{text = "*Vancouver+" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_VC}
 		{text = "*School II+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_UP_SC2}
-		{text = "*Alcatraz+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_UP_Alc}
-		{text = "*Venice HD+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_HD_VN}
-		{text = "*Canada HD+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_HD_CA}
-		
+		{text = "*Alcatraz+" cross_it_out = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_UP_Alc}
+		{text = "*Canada HD+" cross_it_out = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_HD_CA}
 	]
 	
 	last_level_list = THUGPLUS_LEVELS_UG1
@@ -252,7 +252,7 @@
 				<list_name> = "THUG+"
 			case 11
 				<level_list> = THUGPLUS_LEVELS_BETA
-				<list_name> = "Beta"
+				<list_name> = "Misc"
 		endswitch
 		
 		change last_level_list = <level_list>

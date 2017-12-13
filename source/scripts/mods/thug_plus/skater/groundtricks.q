@@ -21,7 +21,7 @@
 	
     // Eventually I will make this a control option!
     // but no one liked the new powerslide control setting so I changed it back
-    Trigger_PowerSlide_OLD = {TripleInOrder, a = Down, b = Down, Black, 333}
+    Trigger_PowerSlide_OLD = {TripleInOrder, a = Down, b = Down, R1, 333}
 	Trigger_PowerSlide_NEW = {InOrder, a = L1, b = L1, 300}
     Trigger_PowerSlide = Trigger_PowerSlide_OLD
     GroundTricks =

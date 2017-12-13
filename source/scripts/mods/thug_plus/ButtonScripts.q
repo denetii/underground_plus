@@ -21,7 +21,7 @@
 						case 3
 							change skater_cam_0_mode = 4
 						case 4
-							change skater_cam_0_mode = 5
+							change skater_cam_0_mode = 13
 						case 5
 							change skater_cam_0_mode = 6
 						case 6
@@ -30,8 +30,32 @@
 							change skater_cam_0_mode = 8
 						case 8
 							change skater_cam_0_mode = 9
-						case 9
-							change skater_cam_0_mode = 1
+                        case 9
+                            change skater_cam_0_mode = 10
+                        case 10
+                            change skater_cam_0_mode = 11
+                        case 11
+                            change skater_cam_0_mode = 12
+                        case 12
+                            change skater_cam_0_mode = 13
+                        case 13
+                            change skater_cam_0_mode = 14
+                        case 14
+                            change skater_cam_0_mode = 15
+                        case 15
+                            change skater_cam_0_mode = 16
+                        case 16
+                            change skater_cam_0_mode = 17
+                        case 17
+                            change skater_cam_0_mode = 18
+                        case 18
+                            change skater_cam_0_mode = 19
+                        case 19
+                            change skater_cam_0_mode = 20
+                        case 20
+                            change skater_cam_0_mode = 21
+                        case 21
+                            change skater_cam_0_mode = 0
 					endswitch
 					skatercam0::sc_setmode mode = skater_cam_0_mode
 				endif
@@ -68,24 +92,48 @@
 			switch skater_cam_0_mode
 				case 0
 					change skater_cam_0_mode = 1
-				case 1
-					change skater_cam_0_mode = 2
-				case 2
-					change skater_cam_0_mode = 3
-				case 3
-					change skater_cam_0_mode = 4
-				case 4
-					change skater_cam_0_mode = 5
-				case 5
-					change skater_cam_0_mode = 6
-				case 6
-					change skater_cam_0_mode = 7
-				case 7
-					change skater_cam_0_mode = 8
-				case 8
-					change skater_cam_0_mode = 9
-				case 9
-					change skater_cam_0_mode = 0
+                case 1
+                    change skater_cam_0_mode = 2
+                case 2
+                    change skater_cam_0_mode = 3
+                case 3
+                    change skater_cam_0_mode = 4
+                case 4
+                    change skater_cam_0_mode = 13
+                case 5
+                    change skater_cam_0_mode = 6
+                case 6
+                    change skater_cam_0_mode = 7
+                case 7
+                    change skater_cam_0_mode = 8
+                case 8
+                    change skater_cam_0_mode = 9
+                case 9
+                    change skater_cam_0_mode = 10
+                case 10
+                    change skater_cam_0_mode = 11
+                case 11
+                    change skater_cam_0_mode = 12
+                case 12
+                    change skater_cam_0_mode = 13
+                case 13
+                    change skater_cam_0_mode = 14
+                case 14
+                    change skater_cam_0_mode = 15
+                case 15
+                    change skater_cam_0_mode = 16
+                case 16
+                    change skater_cam_0_mode = 17
+                case 17
+                    change skater_cam_0_mode = 18
+                case 18
+                    change skater_cam_0_mode = 19
+                case 19
+                    change skater_cam_0_mode = 20
+                case 20
+                    change skater_cam_0_mode = 21
+                case 21
+                    change skater_cam_0_mode = 0
 			endswitch
 			skatercam0::sc_setmode mode = skater_cam_0_mode
 		endif

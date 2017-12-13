@@ -240,7 +240,7 @@
 				if gotparam park_editor
 					LoadLevelPreFile <scnpre>
 				else
-					LoadLevelPreFile (<level> + "scn_net.pre")
+					LoadLevelPreFile <scnpre> //(<level> + "scn_net.pre")
 				endif
 			endif
 		endif
@@ -255,11 +255,15 @@
 			endif
 		else
 			if gotparam level
-				if InNetGame
-					LoadScene scene = <level> is_net
-				else
-					LoadScene scene = <level>
-				endif
+				if ((UNDERGROUNDPLUS_GFX_QUALITY = 2) && (gotparam level_low))
+                    LoadScene scene = <level_low>
+                else
+                    if ((UNDERGROUNDPLUS_GFX_QUALITY = 1) && (gotparam level_mid))
+                        LoadScene scene = <level_mid>
+                    else
+                        LoadScene scene = <level>
+                    endif
+                endif
 			endif
 		endif
 		if gotparam level_name
@@ -279,7 +283,7 @@
 				if gotparam park_editor
 					UnloadPreFile <scnpre> dont_assert
 				else
-					UnloadPreFile (<level> + "scn_net.pre") dont_assert
+					UnloadPreFile <scnpre> dont_assert //(<level> + "scn_net.pre") dont_assert
 				endif
 			endif
 		endif
@@ -373,14 +377,12 @@
 			endif
 		endif
 		if gotparam qb
-			
 			printf "KSK: preselect_random_parts"
 			preselect_random_parts <...>
 		endif
 		if gotparam park_editor
 			LoadTerrain
 		else
-			
 			printf "KSK: SetTerrainDefault"
 			SetTerrainDefault
 			if gotparam qb
@@ -525,26 +527,25 @@
 					else
 						
 						printf "KSK: LoadPipPre col_net.pre"
-						LoadPipPre (<level> + "col_net.pre") heap = bottomup
+						LoadPipPre <colpre> heap = bottomup //(<level> + "col_net.pre") heap = bottomup
 					endif
 				endif
 			endif
 		endif
-		if InNetGame
-			if gotparam park_editor
-				LoadCollision scene = <level>
-			else
-				LoadCollision scene = <level> is_net
-			endif
-		else
-			printf "KSK: LoadCollision"
-			LoadCollision scene = <level>
-		endif
+        
+        if ((UNDERGROUNDPLUS_GFX_QUALITY = 2) && (gotparam level_low))
+            LoadCollision scene = <level_low>
+        else
+            if ((UNDERGROUNDPLUS_GFX_QUALITY = 1) && (gotparam level_mid))
+                LoadCollision scene = <level_mid>
+            else
+                LoadCollision scene = <level>
+            endif
+        endif
+        
 		if gotparam park_editor
 			if gotparam outer_shell
 				if istrue UsePreFilesForLevelLoading
-					
-					
 				endif
 				LoadCollision scene = <outer_shell>
 			endif
@@ -2191,6 +2192,8 @@
         loading_screen = "loadscrn_generic" 
         loading_time = 8.5 
         level = "HD_VN" 
+        level_low = "HD_VN_low" 
+        level_mid = "HD_VN_mid" 
         sky = "HD_VN_Sky" 
         pre = "NY.pre" 
         qb = "levels\HD_VN\HD_VN.qb" 

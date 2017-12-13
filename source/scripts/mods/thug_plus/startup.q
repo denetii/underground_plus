@@ -164,7 +164,7 @@
             screen_setup_widescreen
         else
             printf "Setting square mode!"
-            screen_setup_standard
+            //screen_setup_standard
         endif
 	endscript
 	All_Levels_Unlocked = 1

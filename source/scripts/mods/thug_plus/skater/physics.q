@@ -396,7 +396,9 @@
 	
 	
 	
-	
+	// -------------------------------------------------------
+	// - Underground+ camera definitions
+	// -------------------------------------------------------
 	Skater_Cam_Horiz_FOV = 72.0
 	Skater_Cam_Behind = 14
 	Skater_Cam_Above = 4.0
@@ -424,7 +426,20 @@
 		grind_zoom = 1.89999998,
 		origin_offset = 0.89999998,
 		name = "fancy"}
-	Skater_Camera_Standard_Medium = {
+        
+    // ===================================
+    // Old cameras
+    // ===================================
+    Skater_Camera_Standard_Medium = {horiz_fov = 72.0, behind = 12.0, above = 4.30000019, tilt = 0.18000001, slerp = 0.04, vert_air_slerp = 0.04, vert_air_landed_slerp = 0.375, lerp_xz = 0.25, lerp_y = 0.75, vert_air_lerp_xz = 1.0, vert_air_lerp_y = 1.0, zoom_lerp = 0.0625, big_air_trick_zoom = 0.69999999, lip_trick_zoom = 1.0, lip_trick_tilt = -0.80000001, lip_trick_above = 0.40000001, grind_zoom = 1.0, origin_offset = 0.2, name = "standard"}
+	Skater_Camera_Standard_Far = {horiz_fov = 72.0, behind = 14.0, above = 6.0, tilt = 0.30000001, slerp = 0.08, vert_air_slerp = 0.025, vert_air_landed_slerp = 0.375, lerp_xz = 0.25, lerp_y = 0.75, vert_air_lerp_xz = 1.0, vert_air_lerp_y = 1.0, zoom_lerp = 0.0625, big_air_trick_zoom = 0.60000002, lip_trick_zoom = 1.0, lip_trick_tilt = -0.80000001, lip_trick_above = 0.40000001, grind_zoom = 1.0, origin_offset = 0.2, name = "far"}
+	Skater_Camera_Standard_Near = {horiz_fov = 72.0, behind = 7.0, above = 2.0, tilt = 0.18000001, slerp = 0.08, vert_air_slerp = 0.025, vert_air_landed_slerp = 0.375, lerp_xz = 0.25, lerp_y = 0.75, vert_air_lerp_xz = 1.0, vert_air_lerp_y = 1.0, zoom_lerp = 0.0625, big_air_trick_zoom = 0.89999998, lip_trick_zoom = 1.60000002, lip_trick_tilt = -0.80000001, lip_trick_above = 0.40000001, grind_zoom = 1.0, origin_offset = 0.2, name = "near"}
+	Skater_Camera_Standard_Medium_LTG = {horiz_fov = 72.0, behind = 14.0, above = 2.0, tilt = 0.15000001, slerp = 0.08, vert_air_slerp = 0.025, vert_air_landed_slerp = 0.375, lerp_xz = 0.25, lerp_y = 0.75, vert_air_lerp_xz = 1.0, vert_air_lerp_y = 1.0, zoom_lerp = 0.0625, big_air_trick_zoom = 0.60000002, lip_trick_zoom = 1.0, lip_trick_tilt = -0.80000001, lip_trick_above = 0.40000001, grind_zoom = 1.0, origin_offset = 0.2, name = "standard ltg"}
+    
+    
+    // ===================================
+    // New cameras!
+    // ===================================
+	Skater_Camera_UGPlus_MediumZoom = {
 		horiz_fov = 72.0,
 		behind = 12.0,
 		above = 4.30000019,
@@ -444,7 +459,7 @@
 		grind_zoom = 0.5,
 		origin_offset = 0.2,
 		name = "standard"}
-	Skater_Camera_Standard_Far = {
+	Skater_Camera_UGPlus_Far = {
 		horiz_fov = 85.0
 		behind = 7.0,
 		above = 3.5,
@@ -464,7 +479,7 @@
 		grind_zoom = 1.0,
 		origin_offset = -100.19999695,
 		name = "fancy2"}
-	Skater_Camera_Standard_Near = {
+	Skater_Camera_UGPlus_Near = {
 		horiz_fov = 120.0,
 		behind = 2.0,
 		above = 2.0,
@@ -485,7 +500,7 @@
 		origin_offset = 0.2,
 		name = "near"}
 	
-	Skater_Camera_Standard_New = {
+	Skater_Camera_UGPlus_New = {
 		horiz_fov = 72.0,
 		behind = 0.0,
 		above = 10.0,
@@ -505,7 +520,7 @@
 		grind_zoom = 1.0,
 		origin_offset = 0.2,
 		name = "stationary"}
-	Skater_Camera_Standard_New2 = {
+	Skater_Camera_UGPlus_New2 = {
 		horiz_fov = 72.0,
 		behind = 10.0,
 		above = 4.30000019,
@@ -525,7 +540,7 @@
 		grind_zoom = 1.5,
 		origin_offset = 20.20000076,
 		name = "static"}
-	Skater_Camera_Standard_Dynamic = {
+	Skater_Camera_UGPlus_Dynamic = {
 		horiz_fov = 72.0,
 		behind = 20.0,
 		above = 8.0,
@@ -545,7 +560,7 @@
 		grind_zoom = 1.0,
 		origin_offset = 0.89999998,
 		name = "dynamic"}
-	Skater_Camera_Standard_Medium_LTG = {
+	Skater_Camera_UGPlus_LTG = {
 		horiz_fov = 52.0,
 		behind = 10.0,
 		above = 2.0,
@@ -565,7 +580,7 @@
 		grind_zoom = 1.0,
 		origin_offset = 8.19999981,
 		name = "standard ltg"}
-	Skater_Camera_Above = {
+	Skater_Camera_UGPlus_TopView = {
 		horiz_fov = 72.0,
 		behind = 15.0,
 		above = 12.0,
@@ -585,7 +600,7 @@
 		grind_zoom = 1.89999998,
 		origin_offset = 0.2,
 		name = "top view"}
-	Skater_Camera_FirstPerson = {
+	Skater_Camera_UGPlus_FirstPerson = {
 		horiz_fov = 90.0,
 		behind = 0.25,
 		above = 6.0999999,
@@ -617,15 +632,30 @@
 	Skater_Camera_2P_Horiz_Near = {horiz_fov = 72.0, behind = 8.0, above = 3.20000005, tilt = 0.18000001, slerp = 0.08, vert_air_slerp = 0.025, vert_air_landed_slerp = 0.375, lerp_xz = 0.25, lerp_y = 0.75, vert_air_lerp_xz = 1.0, vert_air_lerp_y = 1.0, zoom_lerp = 0.0625, big_air_trick_zoom = 1.0, lip_trick_zoom = 1.60000002, lip_trick_tilt = -0.80000001, lip_trick_above = 0.40000001, grind_zoom = 1.0, origin_offset = 0.2, name = "near"}
 	
 	Skater_Camera_Array = [Skater_Camera_Undefined,
-		Skater_Camera_Standard_Near,
+		Skater_Camera_UGPlus_FirstPerson,
 		Skater_Camera_Standard_Medium,
 		Skater_Camera_Standard_Far,
 		Skater_Camera_Standard_Medium_LTG,
-		Skater_Camera_Standard_Dynamic,
-		Skater_Camera_Standard_New,
-		Skater_Camera_Standard_New2,
-		Skater_Camera_Above,
-		Skater_Camera_FirstPerson,
+        // Camera modes 4-12 are messed up, the engine makes the camera face backwards
+        // because the devs were too lazy to add a rotation parameter to the camera script data
+        Skater_Camera_Undefined,
+        Skater_Camera_Undefined,
+        Skater_Camera_Undefined,
+        Skater_Camera_Undefined,
+        Skater_Camera_Undefined,
+        Skater_Camera_Undefined,
+        Skater_Camera_Undefined,
+        Skater_Camera_Undefined,
+        // next index should be 13
+        Skater_Camera_UGPlus_MediumZoom,
+		Skater_Camera_Standard_Near,
+		Skater_Camera_UGPlus_Near,
+		Skater_Camera_UGPlus_Far,
+		Skater_Camera_UGPlus_LTG,
+		Skater_Camera_UGPlus_Dynamic,
+		Skater_Camera_UGPlus_New,
+		Skater_Camera_UGPlus_New2,
+		Skater_Camera_UGPlus_TopView,
 	]
 	Skater_Camera_2P_Vert_Array = [Skater_Camera_Undefined,
 		Skater_Camera_2P_Vert_Near,

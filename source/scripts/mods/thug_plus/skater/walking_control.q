@@ -394,11 +394,12 @@
 			BlendPeriodOut 0
 			
 		endif
-		if NOT IsNGC
-			SetEventHandler Ex = Trigger_L2 Scr = CameraFlushButton Group = WalkingEvents
-		else
-			SetEventHandler Ex = Trigger_L1 Scr = CameraFlushButton Group = WalkingEvents
-		endif
+        
+        if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
+            SetEventHandler Ex = Trigger_White Scr = CameraFlushButton Group = WalkingEvents
+        else
+            SetEventHandler Ex = Trigger_L1 Scr = CameraFlushButton Group = WalkingEvents
+        endif
 		
 		SetEventHandler Ex = Release_X Scr = JumpButton Group = WalkingEvents
 		SetEventHandler Ex = MadeOtherSkaterBail Scr = MadeOtherSkaterBailWalk Group = WalkingCollideEvents
@@ -424,7 +425,7 @@
 		SetException Ex = DropToHang Scr = DropToHangState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		
 		SetWalkingTrickState NewWalkingTrickState = GROUND
@@ -447,7 +448,7 @@
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		Walk_ScaleAnimSpeed Off
@@ -475,7 +476,7 @@
 		SetException Ex = DropToHang Scr = DropToHangState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		Walk_ScaleAnimSpeed Off
@@ -524,7 +525,7 @@
 		SetException Ex = Ride Scr = StandToRideState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		CycleSpeedChosenAnim Anims = [WalkSlow WalkFast WRun FastRun] Speeds = [63.88000107 130.44000244 350 520] BlendPeriod = 0.1
@@ -542,7 +543,7 @@
 		SetException Ex = Ride Scr = StandToRideState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		GetSpeed
@@ -601,7 +602,7 @@
 		SetException Ex = Ride Scr = StandToRideState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		RunSpeedChosenAnim Anims = [WStandToWalk WStandToWalk WStandToRun WStandToRun] Speeds = [100 100 370 370] BlendPeriod = 0.1
@@ -621,7 +622,7 @@
 		SetException Ex = Ride Scr = StandToRideState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		Walk_ScaleAnimSpeed Off
@@ -643,7 +644,7 @@
 		SetException Ex = Ride Scr = StandToRideState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		Walk_ScaleAnimSpeed Off
@@ -667,7 +668,7 @@
 		SetException Ex = Ride Scr = StandToRideState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		Walk_ScaleAnimSpeed Off
@@ -692,7 +693,7 @@
 		SetException Ex = Ride Scr = StandToRideState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		Walk_ScaleAnimSpeed Off
@@ -716,7 +717,7 @@
 		SetException Ex = Ride Scr = StandToRideState Group = WalkingStateExceptions
 		SetEventHandler Ex = JumpRequested Scr = JumpRequestedEvent Group = WalkingEvents
 		if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-			SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
+			//SetException Ex = Trigger_White Scr = KskGroundPunchState Group = WalkingStateExceptions
 		endif
 		SetWalkingTrickState NewWalkingTrickState = GROUND
 		Walk_ScaleAnimSpeed Off

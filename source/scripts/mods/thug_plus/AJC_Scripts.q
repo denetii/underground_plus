@@ -1,5 +1,5 @@
 
-	Ksk_SwitchControl_Trigger = {Trigger = {PressTwoAnyOrder, R1, L1, 200}}
+	Ksk_SwitchControl_Trigger = {Trigger = {PressTwoAnyOrder, R1, L1, 400}}
 	Ksk_OffBoard_Trigger = {Trigger = {PressTwoAnyOrder, Black, White, 200}}
 	Ksk_SwitchControl_Trigger_XBOX = {
 		Trigger = {Press, Black, 10}

@@ -3732,6 +3732,7 @@
 		{text = "Tampa" level_num = 3 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_FL level = load_fl}
 	]
 	level_select_menu_level_info = [
+        // THUG1
 		{text = "New Jersey" level_num = 1 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_nj}
 		{text = "Manhattan" level_num = 2 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_ny}
 		{text = "Tampa" level_num = 3 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_FL level = load_fl}
@@ -3746,6 +3747,7 @@
 		{text = "Venice" level_num = 16 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_VN level = load_VN}
 		{text = "Hangar" level_num = 17 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HN level = load_HN}
 		
+        // MISC/BETA
 		{text = "School (UG1 Beta)" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_SC}
 		{text = "Philly (UG1 Beta)" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_PH}
 		{text = "Downhill Jam (UG1 Beta)" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_DJ}
@@ -3763,14 +3765,19 @@
 		{text = "Sk5Ed4 Shell" level_num = 26 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed4_shell}
 		{text = "Sk5Ed5 Shell" level_num = 27 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_sk5ed5_shell}
 		
-		{text = "*Manhattan+" level_num = 2 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_ny}
-		{text = "*Tampa+" level_num = 2 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_fl}
-		{text = "*San Diego+" level_num = 2 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_sd}
-		{text = "*Hawaii+" level_num = 2 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_hi}
-		{text = "*School II+" level_num = 15 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_UP_SC2}
-		{text = "*Dev Level" level_num = 15 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_devlevel}
-		{text = "*Blackwell" level_num = 15 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_bw}
+        // THUG+
+		{text = "*Venice HD+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_HD_VN}
+		{text = "*Blackwell" cross_it_out = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_bw}
+		{text = "*Manhattan+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_ny}
+		{text = "*Tampa+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_fl}
+		{text = "*San Diego+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_sd}
+		{text = "*Hawaii+" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_hi}
+		{text = "*Vancouver+" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_up_VC}
+		{text = "*School II+" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_UP_SC2}
+		{text = "*Alcatraz+" cross_it_out = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_UP_Alc}
+		{text = "*Canada HD+" cross_it_out = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_HD_CA}
 		
+        // THPS3
 		{text = "Foundry" cross_it_out = 90 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_foun}
 		{text = "Canada" cross_it_out = 90 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_can}
 		{text = "Rio" cross_it_out = 90 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th3_rio}
@@ -3783,6 +3790,7 @@
 		{text = "Paris" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_par}
 		{text = "Oil Rig" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_oil}
 		
+        // THPS4
 		{text = "College" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th4_col}
 		{text = "San Francisco" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th4_sf}
 		{text = "Alcatraz" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th4_alc}
@@ -3793,7 +3801,8 @@
 		{text = "Carnival" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th4_cnv}
 		{text = "Chicago" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th4_chi}
 		{text = "Skateshop" level_num = 0 points_to_unlock = -1 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_thps4skateshop}
-		
+		 
+         // THUG2
 		{text = "Training" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_ug2_tr}
 		{text = "Boston" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_ug2_bo}
 		{text = "Barcelona" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_ug2_ba}
@@ -3804,6 +3813,7 @@
 		{text = "Pro Skater" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_VC level = load_ug2_se}
 		{text = "The Triangle" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_VC level = load_ug2_se2}
 		
+        // THAW
 		{text = "Hollywood" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_aw_ho}
 		{text = "Beverly Hills" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_aw_bh}
 		{text = "Downtown LA" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_aw_dt}
@@ -3818,6 +3828,7 @@
 		{text = "Atlanta" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_aw_atlanta}
 		{text = "Marseille" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_aw_mar}
 		
+        // THP8
 		{text = "Training" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_p8_tr}
 		{text = "Suburbs" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_p8_sub}
 		{text = "Downtown" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_p8_dt}
@@ -3828,6 +3839,7 @@
 		{text = "Fun Park" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_p8_fun}
 		{text = "Downhill" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_p8_down}
 		
+        // THPS1/2
 		{text = "Warehouse" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_ware}
 		{text = "School I" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_sc}
 		{text = "The Mall" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_mall}
