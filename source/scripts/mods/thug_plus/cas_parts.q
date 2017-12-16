@@ -76,6 +76,10 @@
 		{part = back_tattoo male = 1 female = 1 submenu = back_tattoo_menu posmenu = back_tattoo_pos_menu is_tattoo = 1}
 		{part = left_leg_tattoo male = 1 female = 1 submenu = left_leg_tattoo_menu posmenu = left_leg_tattoo_pos_menu is_tattoo = 1 no_rot = 1 no_pos = use_uv_v_only}
 		{part = right_leg_tattoo male = 1 female = 1 submenu = right_leg_tattoo_menu posmenu = right_leg_tattoo_pos_menu is_tattoo = 1 no_rot = 1 no_pos = use_uv_v_only}
+        
+        // Underground+ parts defined below
+		{part = ugplus_body male = 0 female = 0}
+		{part = ugplus_accessories male = 1 female = 1 submenu = ugplus_accessories_menu colormenu = ugplus_accessories_color_menu}
 	]
 	master_scaling_list = [
 		{part = headtop_bone_group bone_scaling = 1}

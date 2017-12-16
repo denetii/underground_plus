@@ -1,6 +1,7 @@
 
 	script cas_add_item
 		printf "Adding CAS item here"
+        //DumpHeaps
 		if GotParam play_deck_sound
 			PlaySound DE_MenuSelect vol = 100
 		endif

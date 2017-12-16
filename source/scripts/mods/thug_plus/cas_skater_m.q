@@ -741,7 +741,7 @@
 		{
 			desc_id = Ksk_Jenna
 			frontend_desc = 'Jenna'
-			mesh = "models/skater_secret/skater_jenna.skin"
+			mesh = "models/skater_secret/skater_hawk.skin"
 		}
 	]
 	board = [

@@ -351,6 +351,15 @@
 			default_v = 38
 		}
 		{
+			desc_id = Tracer
+			frontend_desc = 'Tracer'
+			mesh = "models/skater_female/hair_tracer.skin"
+			hair_type = Medium
+			default_h = 64
+			default_s = 64
+			default_v = 64
+		}
+		{
 			desc_id = Short
 			frontend_desc = 'Short'
 			mesh = "models/skater_female/hair_F_short.skin"

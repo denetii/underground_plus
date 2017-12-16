@@ -147,6 +147,9 @@
 		endif
 		kill_start_key_binding
 		printf "replace_handlers to take away start key in load_level"
+        // set_tod_startup should be in the correct place here. Previously, NS had this executing AFTER
+        // set_level_lights, which would clear away anything defined in the level struct!
+        script_change_tod tod_action = set_tod_startup
 		set_level_lights <...>
 		SetScoreAccumulation 0
 		SetScoreDegradation 0
@@ -597,7 +600,6 @@
 			<setup_script>
 		endif
 		if gotparam frontend_level
-			
 			printf "KSK: script_reset_tod"
 			script_reset_tod
 		else
@@ -2669,7 +2671,7 @@
 		sky = "CAS_bedroom_Sky"
 		qb = "levels\cas_bedroom\cas_bedroom.qb"
 		colpre = "cas_bedroomcol.pre"
-		level_qb = "levels\cas_bedroom\cas_bedroom_scripts.qb"
+		level_qb = "levels\thug_plus\cas_bedroom_scripts.qb"
 		startup_script = cas_bedroom_startup
 		default_stats = 8
 		level_number = LevelNum_CAS

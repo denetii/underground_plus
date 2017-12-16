@@ -2561,3 +2561,29 @@
 			in = body
 		}
 	]
+    
+    // Underground+ parts defined below
+    ugplus_body = [
+		{
+			desc_id = None
+			frontend_desc = 'None'
+			no_color
+		}
+		{
+			desc_id = Ksk_Jenna
+			frontend_desc = 'Test 1'
+			mesh = "models/skater_secret/skater_hawk.skin"
+		}
+    ]
+    ugplus_accessories = [
+		{
+			desc_id = None
+			frontend_desc = 'None'
+			no_color
+		}
+		{
+			desc_id = Hands
+			frontend_desc = 'Test 2'
+			mesh = "models/skater_male/Hands.skin"
+		}
+    ]
