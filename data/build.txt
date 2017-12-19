@@ -1,5 +1,6 @@
 \scripts\aaaaloopchecker.qb
 \scripts\allanims.qb
+\scripts\mods\thug_plus\cas_custom.qb
 \scripts\mods\thug_plus\config.qb
 \scripts\mods\thug_plus\controls.qb
 \scripts\mods\thug_plus\compat_functions.qb

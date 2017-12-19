@@ -1,6 +1,8 @@
 	in_cinematic_sequence = 0
 	in_net_setup_flow = 0
 	CASCURRENTCOLOR = [12 44 67 110]
+	CASMENU_COLOR_UGPLUS = [224 64 32 128]
+	CASMENU_COLOR_CUSTOM = [32 64 224 128]
 	script launch_cas
 		SetGameType freeskate
 		SetCurrentGameType
@@ -632,6 +634,7 @@
 					<shouldDisplayList> = (<female> = 1)
 				endif
 			endif
+            
 			if GotParam submenu
 				if (<submenu> = <current_submenu>)
 					if NOT (<shouldDisplayList> = 0)
@@ -828,7 +831,7 @@
 			parent = edit_skater_scrollingmenu
 			id = edit_skater_vmenu
 			just = [left top]
-			dont_allow_wrap
+			//dont_allow_wrap
 			padding_scale = <padding_scale>
 			spacing_between = <spacing_between>
 			event_handlers = [{pad_up set_which_arrow params = {arrow = edit_skater_menu_up_arrow}}
@@ -1034,10 +1037,18 @@
 				<is_visible> = 0
 			endif
 		endif
+		if NOT GotParam ugplus_type
+			<ugplus_type> = 0
+        else
+            printf "ugplus_type found!"
+		endif
 		if IsTrue worst_case_cas_debug
 			<is_visible> = 1
 		endif
-		return is_visible = <is_visible> secret_color = <secret_color>
+        if ((GotParam frontend_desc) AND (<frontend_desc> = 'NULL'))
+            <is_visible> = 0
+        endif
+		return is_visible = <is_visible> secret_color = <secret_color> ugplus_type = <ugplus_type>
 	endscript
 	script edit_skater_possibly_add_cas_item
 		cas_item_is_visible <...>
@@ -1052,6 +1063,7 @@
 			focus_params = {rgba = [32 32 255 255]}
 			unfocus_params = {rgba = [32 32 255 128]}
 		endif
+        
 		if GotParam startlist
 			if NOT ((<part_index> + 1) > <startlist>)
 				return
@@ -1077,7 +1089,7 @@
 				text = <FrontEnd_Desc>
 				tab = tab3
 				pad_choose_script = cas_add_item
-				pad_choose_params = {part = <part> desc_id = <desc_id>}
+				pad_choose_params = {part = <part> desc_id = <desc_id> ugplus_type = <ugplus_type>}
 				focus_script = <focus_script>
 				focus_params = <focus_params>
 				unfocus_script = <unfocus_script>
@@ -1091,6 +1103,7 @@
 				show_logos = <show_logos>
 				texture = <texture>
 				current_part = <current_part>
+                ugplus_type = <ugplus_type>
 			}
 			return cas_item_was_added = 1
 		endif
@@ -1126,11 +1139,34 @@
 		if NOT GotParam icon_rgba
 			FormatText ChecksumName = icon_rgba "%i_HIGHLIGHTED_TEXT_COLOR" i = (THEME_COLOR_PREFIXES[current_theme_prefix])
 		endif
-		FormatText ChecksumName = rgba "%i_UNHIGHLIGHTED_TEXT_COLOR" i = (THEME_COLOR_PREFIXES[current_theme_prefix])
+        FormatText ChecksumName = rgba "%i_UNHIGHLIGHTED_TEXT_COLOR" i = (THEME_COLOR_PREFIXES[current_theme_prefix])
 		if GotParam current_part
 			rgba = CASCURRENTCOLOR
-			unfocus_params = {<unfocus_params> text_rgba = <rgba>}
-		endif
+            if GotParam ugplus_type
+                if (<ugplus_type> = 1)
+                    unfocus_params = {<unfocus_params> text_rgba = CASMENU_COLOR_UGPLUS}
+                else
+                    if (<ugplus_type> = 2)
+                        unfocus_params = {<unfocus_params> text_rgba = CASMENU_COLOR_CUSTOM}
+                    else
+                        unfocus_params = {<unfocus_params> text_rgba = <rgba>}
+                    endif
+                endif
+            endif
+        else
+            if GotParam ugplus_type
+                if (<ugplus_type> = 1)
+                    rgba = CASMENU_COLOR_UGPLUS
+                    unfocus_params = {<unfocus_params> text_rgba = CASMENU_COLOR_UGPLUS}
+                else
+                    if (<ugplus_type> = 2)
+                        rgba = CASMENU_COLOR_CUSTOM
+                        unfocus_params = {<unfocus_params> text_rgba = CASMENU_COLOR_CUSTOM}
+                    endif
+                endif
+            endif
+        endif
+        
 		if GotParam is_visible_script
 			<is_visible_script> <is_visible_params>
 			if (<is_enabled> = 0)
@@ -1204,6 +1240,7 @@
 		else
 			alpha = 1.0
 		endif
+        
 		CreateScreenElement {
 			type = TextElement
 			parent = <parent_id>

@@ -114,8 +114,46 @@
 		SetLoadingBarBorder width = 5 height = 5
 		SetLoadingBarBorderColor r = 40 g = 40 b = 40
 	endscript
+    script set_custom_cas_items
+    
+        GetArraySize cas_custom_items
+        <base_index> = 0
+        while
+            GetElement cas_custom_items Index = <base_index>
+            <base_index> = (<base_index> + 1)
+            <customdata_array> = (<Element>.custom_items)
+            part_list = (<Element>.part_list)
+            <index> = 0
+            while
+                <index> = (<index> + 1)
+                GetElement <customdata_array> Index = <index>
+                <new_item> = <Element>
+                printf "Found item %s" s = (<new_item>.frontend_desc)
+                SetArrayElement {ArrayName = part_list
+                            index = <index>
+                            newvalue = <new_item>
+                        }
+            repeat 10
+        repeat <array_size>
+        
+        /*
+        WORKING!
+        casdata_array = skater_f_head
+        <customdata_array> = cas_custom_skater_f_head
+        <index> = 0
+        while
+            <index> = (<index> + 1)
+            GetElement <customdata_array> Index = <index>
+            <new_item> = <Element>
+            printf "Found item %s" s = (<new_item>.frontend_desc)
+            SetArrayElement {ArrayName = casdata_array
+                            index = <index>
+                            newvalue = <new_item>
+                        }
+        repeat 10*/
+    endscript
 	script startup_loading_screen
-		if NOT Bootstrap
+		/*if NOT Bootstrap
 			if IsPS2
 				if CD
 					Displayloadingscreen blank
@@ -143,7 +181,7 @@
 				PlayMovie "movies\nslogo"
 				PlayMovie "movies\intro"
 			endif
-		endif
+		endif*/
 		if Bootstrap
 			Displayloadingscreen "loadscrn_demo"
 		else
@@ -166,6 +204,10 @@
             printf "Setting square mode!"
             //screen_setup_standard
         endif
+        
+        // Set UG+ custom CAS items here!
+        set_custom_cas_items
+        
 	endscript
 	All_Levels_Unlocked = 1
 	bootstrap_build = 0

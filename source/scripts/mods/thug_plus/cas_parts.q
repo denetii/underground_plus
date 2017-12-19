@@ -18,7 +18,7 @@
 		{part = ped_f_legs use_pedpre submenu = pants_menu}
 		{part = ped_body use_pedpre submenu = body_menu}
 		{part = ped_board use_pedpre submenu = deck_graphic_menu}
-		{part = body male = 0 female = 0}
+		{part = body male = 1 female = 1 submenu = body_menu}
 		{part = board material = skateboard_wheels pass = 0 male = 1 female = 1 submenu = board_menu colormenu = wheel_color_menu}
 		{part = skater_m_head material = cashead_head pass = [0 1 2] male = 1 female = 0 submenu = face_menu colormenu = skin_color_menu}
 		{part = skater_m_torso
@@ -78,7 +78,6 @@
 		{part = right_leg_tattoo male = 1 female = 1 submenu = right_leg_tattoo_menu posmenu = right_leg_tattoo_pos_menu is_tattoo = 1 no_rot = 1 no_pos = use_uv_v_only}
         
         // Underground+ parts defined below
-		{part = ugplus_body male = 0 female = 0}
 		{part = ugplus_accessories male = 1 female = 1 submenu = ugplus_accessories_menu colormenu = ugplus_accessories_color_menu}
 	]
 	master_scaling_list = [

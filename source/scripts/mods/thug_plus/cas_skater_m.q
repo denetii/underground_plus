@@ -546,84 +546,71 @@
 	}
 	body = [
 		{
-			desc_id = MaleBody
-			frontend_desc = 'new skeleton'
+			desc_id = None
+			frontend_desc = 'None'
+		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = body_Custom01
+			frontend_desc = 'NULL'
 			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Hawk
-			frontend_desc = 'Hawk'
-			mesh = "models/skater_male/skater_hawk.skin"
+			desc_id = body_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Glifberg
-			frontend_desc = 'Hawk'
-			mesh = "models/skater_male/skater_Glifberg.skin"
+			desc_id = body_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Muska
-			frontend_desc = 'Muska'
-			mesh = "models/skater_male/skater_muska.skin"
+			desc_id = body_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Lasek
-			frontend_desc = 'Lasek'
-			mesh = "models/skater_male/skater_lasek.skin"
+			desc_id = body_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Magera
-			frontend_desc = 'Magera'
-			mesh = "models/skater_male/skater_magera.skin"
+			desc_id = body_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Mullen
-			frontend_desc = 'Mullen'
-			mesh = "models/skater_male/skater_mullen.skin"
-			
+			desc_id = body_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Campbell
-			frontend_desc = 'Campbell'
-			mesh = "models/skater_male/skater_Campbell.skin"
+			desc_id = body_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Rowley
-			frontend_desc = 'Rowley'
-			mesh = "models/skater_male/skater_rowley.skin"
+			desc_id = body_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
 		{
-			desc_id = Vallely
-			frontend_desc = 'Vallely'
-			mesh = "models/skater_male/skater_vallely.skin"
-			
+			desc_id = body_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/skater_male.skin"
 		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
-			desc_id = Reynolds
-			frontend_desc = 'Reynolds'
-			mesh = "models/skater_male/skater_reynolds.skin"
+			desc_id = MaleBody
+			frontend_desc = 'White Male Body'
+			mesh = "models/skater_male/skater_male.skin"
 		}
-		{
-			desc_id = Koston
-			frontend_desc = 'Koston'
-			mesh = "models/skater_male/skater_koston.skin"
-		}
-		{
-			desc_id = Rodrigez
-			frontend_desc = 'Rodrigez'
-			mesh = "models/skater_male/skater_rodrigez.skin"
-		}
-		{
-			desc_id = Thomas
-			frontend_desc = 'Thomas'
-			mesh = "models/skater_male/skater_thomas.skin"
-		}
-		{
-			desc_id = Saari
-			frontend_desc = 'Saari'
-			mesh = "models/skater_male/skater_saari.skin"
-			
-		}
-		{
+        {
 			desc_id = MaleBody2
 			frontend_desc = 'Black Male Body'
 			mesh = "models/skater_male/skater_male.skin"
@@ -719,6 +706,80 @@
 			with4 = "textures/skater_male/CS_NSN_F_Gry_foot"
 		}
 		{
+			desc_id = Hawk
+			frontend_desc = 'Hawk'
+			mesh = "models/skater_male/skater_hawk.skin"
+		}
+		{
+			desc_id = Glifberg
+			frontend_desc = 'Gilfberg'
+			mesh = "models/skater_male/skater_Glifberg.skin"
+		}
+		{
+			desc_id = Muska
+			frontend_desc = 'Muska'
+			mesh = "models/skater_male/skater_muska.skin"
+		}
+		{
+			desc_id = Lasek
+			frontend_desc = 'Lasek'
+			mesh = "models/skater_male/skater_lasek.skin"
+		}
+		{
+			desc_id = Magera
+			frontend_desc = 'Magera'
+			mesh = "models/skater_male/skater_magera.skin"
+		}
+		{
+			desc_id = Mullen
+			frontend_desc = 'Mullen'
+			mesh = "models/skater_male/skater_mullen.skin"
+			
+		}
+		{
+			desc_id = Campbell
+			frontend_desc = 'Campbell'
+			mesh = "models/skater_male/skater_Campbell.skin"
+		}
+		{
+			desc_id = Rowley
+			frontend_desc = 'Rowley'
+			mesh = "models/skater_male/skater_rowley.skin"
+		}
+		{
+			desc_id = Vallely
+			frontend_desc = 'Vallely'
+			mesh = "models/skater_male/skater_vallely.skin"
+			
+		}
+		{
+			desc_id = Reynolds
+			frontend_desc = 'Reynolds'
+			mesh = "models/skater_male/skater_reynolds.skin"
+		}
+		{
+			desc_id = Koston
+			frontend_desc = 'Koston'
+			mesh = "models/skater_male/skater_koston.skin"
+		}
+		{
+			desc_id = Rodrigez
+			frontend_desc = 'Rodrigez'
+			mesh = "models/skater_male/skater_rodrigez.skin"
+		}
+		{
+			desc_id = Thomas
+			frontend_desc = 'Thomas'
+			mesh = "models/skater_male/skater_thomas.skin"
+		}
+		{
+			desc_id = Saari
+			frontend_desc = 'Saari'
+			mesh = "models/skater_male/skater_saari.skin"
+			
+		}
+		
+		{
 			desc_id = Ped_Testing
 			frontend_desc = 'Ped_Testing'
 			mesh = "models/Ped_Male/Ped_Testing.skin"
@@ -740,15 +801,87 @@
 		}
 		{
 			desc_id = Ksk_Jenna
-			frontend_desc = 'Jenna'
-			mesh = "models/skater_secret/skater_hawk.skin"
+			frontend_desc = 'Chloe'
+			mesh = "models/undergroundplus/cas_skater_body/skater_hawk.skin"
+		}
+		{
+			desc_id = Ksk_Jenna2
+			frontend_desc = 'D.Va'
+			mesh = "models/undergroundplus/cas_skater_body/skater_dva.skin"
 		}
 	]
 	board = [
 		{
+			desc_id = None
+			frontend_desc = 'None'
+			//mesh = "models/skater_secret/board_Gene.skin"
+		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = board_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+		{
+			desc_id = board_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/board_default.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
 			desc_id = #"Default"
 			frontend_desc = 'Default'
 			mesh = "models/skater_male/board_default.skin"
+			multicolor = 1
+		}
+		{
+			desc_id = #"Jole HD"
+			frontend_desc = 'Jole HD'
+			mesh = "models/UndergroundPlus/cas_boards/board_JoleHD.skin"
 			multicolor = 1
 		}
 		{
@@ -768,13 +901,73 @@
 		}
 	]
 	skater_m_head = [
+        {
+            desc_id = None
+            frontend_desc = 'None'
+        }
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = m_head_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+		{
+			desc_id = m_head_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/face_male_01.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = Ksk_FemaleSkin
 			frontend_desc = 'Female Skin 1'
 			mesh = "models/skater_female/head_Female_01.skin"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -786,7 +979,7 @@
 			with = "textures/skater_male/CS_CRS_F_Wht_Head02"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -798,7 +991,7 @@
 			with = "textures/skater_male/CS_CRS_F_Wht_Head03"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -806,7 +999,7 @@
 			desc_id = Ksk_FemaleSkin_4
 			frontend_desc = 'Female Skin 4'
 			script disqualify_script
-				SetPart part = body desc_id = Ksk_Jenna
+				//SetPart part = body desc_id = Ksk_Jenna
 			endscript
 		}
 		{
@@ -819,7 +1012,7 @@
 			replace1 = "CS_NSN_eye.png"
 			with1 = "textures/skater_male/CS_NSN_eye_blue01.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -832,7 +1025,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_CAS_Male_Head06.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -845,7 +1038,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_CAS_Male_Head02.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -858,7 +1051,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_CAS_Male_Head04.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -873,7 +1066,7 @@
 			replace1 = "CS_NSN_eye.png"
 			with1 = "textures/skater_male/CS_NSN_eye_hazel01.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -886,7 +1079,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Blk_Head01.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody2
+				//SetPart part = body desc_id = MaleBody2
 			endscript
 			skintone = dark
 			multicolor = 1
@@ -899,7 +1092,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Blk_Head02.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody2
+				//SetPart part = body desc_id = MaleBody2
 			endscript
 			skintone = dark
 			multicolor = 1
@@ -912,7 +1105,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Blk_Head03.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody2
+				//SetPart part = body desc_id = MaleBody2
 			endscript
 			skintone = dark
 			multicolor = 1
@@ -925,7 +1118,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Blk_Head04.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody2
+				//SetPart part = body desc_id = MaleBody2
 			endscript
 			skintone = dark
 			multicolor = 1
@@ -938,7 +1131,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Blk_Head05.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody2
+				//SetPart part = body desc_id = MaleBody2
 			endscript
 			skintone = dark
 			multicolor = 1
@@ -951,7 +1144,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Brn_Head01.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody3
+				//SetPart part = body desc_id = MaleBody3
 			endscript
 			skintone = tan
 			multicolor = 1
@@ -964,7 +1157,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Brn_Head02.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody3
+				//SetPart part = body desc_id = MaleBody3
 			endscript
 			skintone = tan
 			multicolor = 1
@@ -977,7 +1170,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Brn_Head03.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody3
+				//SetPart part = body desc_id = MaleBody3
 			endscript
 			skintone = tan
 			multicolor = 1
@@ -990,7 +1183,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Brn_Head04.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody3
+				//SetPart part = body desc_id = MaleBody3
 			endscript
 			skintone = tan
 			multicolor = 1
@@ -1003,7 +1196,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Brn_Head05.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody3
+				//SetPart part = body desc_id = MaleBody3
 			endscript
 			skintone = tan
 			multicolor = 1
@@ -1016,7 +1209,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_M_Gry_Head01"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody4
+				//SetPart part = body desc_id = MaleBody4
 			endscript
 			skintone = grey
 			multicolor = 1
@@ -1037,7 +1230,7 @@
 			mesh_if_facemapped = "models/skater_male/Facemap_male_01.skin"
 			no_color
 			script disqualify_script
-				ClearPart part = skater_m_hair
+				//ClearPart part = skater_m_hair
 			endscript
 			NoCutsceneHead
 			skintone = light
@@ -1057,7 +1250,7 @@
 			frontend_desc = 'Caballero'
 			mesh = "models/skater_male/head_caballero.skin"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody3
+				//SetPart part = body desc_id = MaleBody3
 			endscript
 			is_pro_head
 			is_caballero_head
@@ -1068,7 +1261,7 @@
 			frontend_desc = 'Campbell'
 			mesh = "models/skater_male/head_campbell.skin"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody2
+				//SetPart part = body desc_id = MaleBody2
 			endscript
 			is_pro_head
 		}
@@ -1094,6 +1287,62 @@
 			frontend_desc = 'Bald'
 			no_color
 		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = m_head_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+		{
+			desc_id = m_head_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/hair_m_w_buzz.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = buzzed
 			frontend_desc = 'Buzzed'
@@ -1526,6 +1775,62 @@
 			no_color
 			is_clowny
 		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = m_torso_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+		{
+			desc_id = m_torso_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/shirt_sleeveless.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = Sleeveless
 			frontend_desc = 'Sleeveless'
@@ -2042,6 +2347,68 @@
 	]
 	skater_m_legs = [
 		{
+			desc_id = Briefs
+			frontend_desc = 'None'
+			is_clowny
+			no_color
+		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = m_legs_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+		{
+			desc_id = m_legs_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/pants_tight.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
 			desc_id = Tight
 			frontend_desc = 'Tight'
 			mesh = "models/skater_male/pants_tight.skin"
@@ -2208,12 +2575,6 @@
 			is_clowny
 		}
 		{
-			desc_id = Briefs
-			frontend_desc = 'Briefs'
-			is_clowny
-			no_color
-		}
-		{
 			desc_id = #"Suit Pants"
 			frontend_desc = 'Suit Pants'
 			mesh = "models/skater_male/pants_suit.skin"
@@ -2249,6 +2610,62 @@
 			frontend_desc = 'None'
 			no_color
 		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = m_socks_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = m_socks_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = High
 			frontend_desc = 'High'
@@ -2304,6 +2721,62 @@
 			frontend_desc = 'None'
 			no_color
 		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = m_backpack_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = m_backpack_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = Backpack1
 			frontend_desc = 'Backpack 1'

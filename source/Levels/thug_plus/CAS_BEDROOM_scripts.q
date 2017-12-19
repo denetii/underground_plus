@@ -4884,7 +4884,13 @@
 	endscript
 	edit_skater_head_options = [
 		{
-			group_title = "HEAD OPTIONS"
+			group_title = "BASE OPTIONS"
+			text = 'Body'
+			submenu = body_menu
+			is_visible_script = currently_editing_custom
+			//cam_angle = 0
+		}
+        {
 			text = 'Face'
 			submenu = face_menu
 			is_visible_script = currently_editing_custom

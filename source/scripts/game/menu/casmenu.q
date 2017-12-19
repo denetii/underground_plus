@@ -5,7 +5,7 @@
 		if GotParam play_deck_sound
 			PlaySound DE_MenuSelect vol = 100
 		endif
-		change_current_part_highlight {id = <id> unfocus_script = <unfocus_script> unfocus_params = <unfocus_params>}
+		change_current_part_highlight {id = <id> unfocus_script = <unfocus_script> unfocus_params = <unfocus_params> ugplus_type = <ugplus_type>}
 		cas_handle_disqualifications <...>
 		if ChecksumEquals a = <part> b = skater_m_head
 			clear_face_texture_from_profile

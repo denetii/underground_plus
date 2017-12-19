@@ -1,5 +1,66 @@
 
+    
 	skater_f_head = [
+		{
+			desc_id = None
+			frontend_desc = 'None'
+		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = f_head_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+		{
+			desc_id = f_head_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/head_steamer.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = Steamer
 			frontend_desc = 'Elissa Steamer'
@@ -17,7 +78,7 @@
 			replace1 = "CS_NSN_eye.png"
 			with1 = "textures/skater_male/CS_NSN_eye_blue01.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -30,7 +91,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_CAS_Male_Head06.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -43,7 +104,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_CAS_Male_Head02.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -56,7 +117,7 @@
 			replace = "CS_NSN_facemap.png"
 			with = "textures/skater_male/CS_NSN_CAS_Male_Head04.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
@@ -71,20 +132,20 @@
 			replace1 = "CS_NSN_eye.png"
 			with1 = "textures/skater_male/CS_NSN_eye_hazel01.png"
 			script disqualify_script
-				SetPart part = body desc_id = MaleBody
+				//SetPart part = body desc_id = MaleBody
 			endscript
 			skintone = light
 			multicolor = 1
 		}
 		
-		{
+		/*{
 			desc_id = Ksk_cas_Jenna
 			frontend_desc = 'Jenna'
 			script disqualify_script
-				SetPart part = body desc_id = Ksk_Jenna
+				//SetPart part = body desc_id = Ksk_Jenna
 			endscript
 			skintone = light
-		}
+		}*/
 		
 		{
 			desc_id = #"0x12A569EF"
@@ -92,7 +153,7 @@
 			mesh = "models/skater_female/head_Female_01.skin"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -103,7 +164,7 @@
 			mesh = "models/cutscenes/Head_cas_female01b.skin"
 			mesh_if_facemapped = "models/cutscenes/Head_cas_female01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -115,7 +176,7 @@
 			with = "textures/skater_male/CS_CRS_F_Wht_Head02"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -127,7 +188,7 @@
 			with = "textures/skater_male/CS_CRS_F_Wht_Head03"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -139,7 +200,7 @@
 			with = "textures/skater_male/CS_CRS_F_Wht_Head04"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -152,7 +213,7 @@
 			with = "textures/skater_male/CS_CRS_F_Wht_Head05"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody
+				//SetPart part = body desc_id = FemaleBody
 			endscript
 			skintone = light
 		}
@@ -165,7 +226,7 @@
 			with = "textures/skater_male/CS_CRS_F_blk_Head02"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody2
+				//SetPart part = body desc_id = FemaleBody2
 			endscript
 			skintone = dark
 		}
@@ -177,7 +238,7 @@
 			with = "textures/skater_male/CS_CRS_F_blk_Head03"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody2
+				//SetPart part = body desc_id = FemaleBody2
 			endscript
 			skintone = dark
 		}
@@ -189,7 +250,7 @@
 			with = "textures/skater_male/CS_CRS_F_blk_Head05"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody2
+				//SetPart part = body desc_id = FemaleBody2
 			endscript
 			skintone = dark
 		}
@@ -202,7 +263,7 @@
 			with = "textures/skater_male/CS_CRS_F_Blk_Head04"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody2
+				//SetPart part = body desc_id = FemaleBody2
 			endscript
 			skintone = dark
 		}
@@ -214,7 +275,7 @@
 			with = "textures/skater_male/CS_NSN_F_blk_Head01"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody2
+				//SetPart part = body desc_id = FemaleBody2
 			endscript
 			skintone = dark
 		}
@@ -227,7 +288,7 @@
 			with = "textures/skater_male/CS_CRS_F_Bwn_Head02"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody3
+				//SetPart part = body desc_id = FemaleBody3
 			endscript
 			skintone = tan
 		}
@@ -239,7 +300,7 @@
 			with = "textures/skater_male/CS_CRS_F_Bwn_Head04"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody3
+				//SetPart part = body desc_id = FemaleBody3
 			endscript
 			skintone = tan
 		}
@@ -251,7 +312,7 @@
 			with = "textures/skater_male/CS_CRS_F_Bwn_Head05"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody3
+				//SetPart part = body desc_id = FemaleBody3
 			endscript
 			skintone = tan
 		}
@@ -264,7 +325,7 @@
 			with = "textures/skater_male/CS_CRS_F_Bwn_Head01"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody3
+				//SetPart part = body desc_id = FemaleBody3
 			endscript
 			skintone = tan
 		}
@@ -276,7 +337,7 @@
 			with = "textures/skater_male/CS_CRS_F_Bwn_Head03"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody3
+				//SetPart part = body desc_id = FemaleBody3
 			endscript
 			skintone = tan
 		}
@@ -289,7 +350,7 @@
 			with = "textures/skater_male/CS_NSN_F_Gry_Head01.png"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				SetPart part = body desc_id = FemaleBody4
+				//SetPart part = body desc_id = FemaleBody4
 			endscript
 			skintone = Grey
 		}
@@ -308,18 +369,75 @@
 			mesh = "models/skater_male/Skin_Extra_eyes.skin"
 			mesh_if_facemapped = "models/skater_female/Facemap_female_01.skin"
 			script disqualify_script
-				ClearPart part = skater_f_hair
+				//ClearPart part = skater_f_hair
 			endscript
 			no_color
 			NoCutsceneHead
 			skintone = light
 		}
-		{
-			desc_id = None
-			frontend_desc = 'None'
-		}
 	]
 	skater_f_hair = [
+		{
+			desc_id = Bald
+			frontend_desc = 'None'
+			no_color
+		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = f_hair_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+		{
+			desc_id = f_hair_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/hair_medium.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = Medium
 			frontend_desc = 'Medium 1'
@@ -355,9 +473,10 @@
 			frontend_desc = 'Tracer'
 			mesh = "models/skater_female/hair_tracer.skin"
 			hair_type = Medium
-			default_h = 64
-			default_s = 64
-			default_v = 64
+			//default_h = 64
+			//default_s = 64
+			//default_v = 64
+            ugplus_type = 1
 		}
 		{
 			desc_id = Short
@@ -497,11 +616,6 @@
 			default_v = 52
 		}
 		{
-			desc_id = Bald
-			frontend_desc = 'Bald'
-			no_color
-		}
-		{
 			desc_id = Hair_MediumHAT
 			frontend_desc = 'Hair MediumHAT'
 			mesh = "models/skater_female/Hair_F_MediumHAT.skin"
@@ -523,7 +637,62 @@
 			frontend_desc = 'None'
 			shows_panties no_color
 		}
-		
+		// ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = f_torso_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+		{
+			desc_id = f_torso_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/shirt_tshirt.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = #"T-shirt"
 			frontend_desc = 'T-Shirt'
@@ -802,6 +971,62 @@
 			frontend_desc = 'None'
 			shows_panties no_color
 		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = f_legs_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+		{
+			desc_id = f_legs_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_female/pant_shorts.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = Shorts
 			frontend_desc = 'Shorts'
@@ -928,6 +1153,62 @@
 			frontend_desc = 'None'
 			no_color
 		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = f_socks_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+		{
+			desc_id = f_socks_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_socks.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = High
 			frontend_desc = 'High'
@@ -983,6 +1264,62 @@
 			frontend_desc = 'None'
 			no_color
 		}
+        // ***************************************************
+        // * BEGIN UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
+		{
+			desc_id = f_backpack_Custom01
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom02
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom03
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom04
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom05
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom06
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom07
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom08
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom09
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+		{
+			desc_id = f_backpack_Custom10
+			frontend_desc = 'NULL'
+			mesh = "models/skater_male/extra_backpack.skin"
+		}
+        // ***************************************************
+        // * END UNDERGROUND+ CUSTOM ITEM SLOTS
+        // ***************************************************
 		{
 			desc_id = Backpack1
 			frontend_desc = 'Backpack 1'

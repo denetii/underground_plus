@@ -2708,7 +2708,7 @@
 		level = "nj_skateshop"
 		qb = "levels\nj_skateshop\nj_skateshop.qb"
 		colpre = "nj_skateshopcol.pre"
-		level_qb = "levels\nj_skateshop\nj_skateshop_scripts.qb"
+		level_qb = "levels\thug_plus\nj_skateshop_scripts.qb"
 		startup_script = boardshop_startup
 		level_number = LevelNum_Boardshop
 		frontend_level = 1
