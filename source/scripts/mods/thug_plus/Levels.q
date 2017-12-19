@@ -875,6 +875,41 @@
 		load_level Level_AW_Mar
 	endscript
 	
+    // ********************************************************
+    // Underground+ custom level slots go here!
+    // ********************************************************
+	script Load_Custom01
+		load_level Level_Custom01
+	endscript
+	script Load_Custom02
+		load_level Level_Custom02
+	endscript
+	script Load_Custom03
+		load_level Level_Custom03
+	endscript
+	script Load_Custom04
+		load_level Level_Custom04
+	endscript
+	script Load_Custom05
+		load_level Level_Custom05
+	endscript
+	script Load_Custom06
+		load_level Level_Custom06
+	endscript
+	script Load_Custom07
+		load_level Level_Custom07
+	endscript
+	script Load_Custom08
+		load_level Level_Custom08
+	endscript
+	script Load_Custom09
+		load_level Level_Custom09
+	endscript
+	script Load_Custom10
+		load_level Level_Custom10
+	endscript
+	
+    
 	Level_Default = {
 		structure_name = Level_Default
 		load_script = Load_Default

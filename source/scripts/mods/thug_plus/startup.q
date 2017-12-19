@@ -152,6 +152,7 @@
                         }
         repeat 10*/
     endscript
+    
 	script startup_loading_screen
 		/*if NOT Bootstrap
 			if IsPS2
@@ -205,9 +206,8 @@
             //screen_setup_standard
         endif
         
-        // Set UG+ custom CAS items here!
+        // Set UG+ custom CAS items & levels here!
         set_custom_cas_items
-        
 	endscript
 	All_Levels_Unlocked = 1
 	bootstrap_build = 0

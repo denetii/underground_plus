@@ -3859,6 +3859,17 @@
 		{text = "Chopper Drop" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_cd}
 		{text = "Skate Heaven" cross_it_out = 1 level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_th2_hvn}
 		
+        // Underground+ Custom level slots
+		{text = "Custom Level 1" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom01}
+		{text = "Custom Level 2" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom02}
+		{text = "Custom Level 3" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom03}
+		{text = "Custom Level 4" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom04}
+		{text = "Custom Level 5" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom05}
+		{text = "Custom Level 6" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom06}
+		{text = "Custom Level 7" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom07}
+		{text = "Custom Level 8" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom08}
+		{text = "Custom Level 9" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom09}
+		{text = "Custom Level 10" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = Load_Custom10}
 	]
 	premade_parks_info = [
 		

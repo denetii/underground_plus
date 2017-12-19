@@ -1,5 +1,5 @@
 	THUGPLUS_LEVEL_INDEX = 0
-	THUGPLUS_LEVEL_PAGELIMIT = 11
+	THUGPLUS_LEVEL_PAGELIMIT = 12
 	
 	THUGPLUS_LEVELS_TH1 = [
 		{text = "Warehouse" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_ware}
@@ -253,6 +253,9 @@
 			case 11
 				<level_list> = THUGPLUS_LEVELS_BETA
 				<list_name> = "Misc"
+			case 12
+				<level_list> = THUGPLUS_LEVELS_CUSTOM
+				<list_name> = "Custom"
 		endswitch
 		
 		change last_level_list = <level_list>

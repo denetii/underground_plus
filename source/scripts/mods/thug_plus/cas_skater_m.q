@@ -801,13 +801,8 @@
 		}
 		{
 			desc_id = Ksk_Jenna
-			frontend_desc = 'Chloe'
-			mesh = "models/undergroundplus/cas_skater_body/skater_hawk.skin"
-		}
-		{
-			desc_id = Ksk_Jenna2
-			frontend_desc = 'D.Va'
-			mesh = "models/undergroundplus/cas_skater_body/skater_dva.skin"
+			frontend_desc = 'Jenna'
+			mesh = "models/skater_secret/skater_jenna.skin"
 		}
 	]
 	board = [
