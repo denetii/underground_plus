@@ -302,6 +302,9 @@
 				
 				printf "KSK: LoadLevelPreFile"
 				LoadLevelPreFile <pre>
+                
+                //printf "Loading new all_anims.pre!" 
+                //LoadPreFile "all_anims.pre" use_bottom_up_heap
 			endif
 		endif
 		if isNGC
@@ -342,6 +345,8 @@
 				PreloadModels
 			endif
 		endif
+        
+        
 		if gotparam level_qb
 			if isNGC
 				if german
@@ -839,8 +844,17 @@
 	script Load_Oil
 		load_level Level_Oil
 	endscript
-	script Load_Hvn
-		load_level Level_Hvn
+	script load_th2_hvn
+		load_level level_th2_hvn
+	endscript
+	script load_th2_ny
+		load_level level_th2_ny
+	endscript
+	script load_th2x_roof
+		load_level level_th2x_roof
+	endscript
+	script load_th2x_spot
+		load_level level_th2x_spot
 	endscript
 	script Load_devlevel
 		load_level Level_devlevel
@@ -861,6 +875,9 @@
 	
 	script Load_TH2_Han
 		load_level Level_TH2_Han
+	endscript
+	script Load_TH2_SSV
+		load_level Level_TH2_SSV
 	endscript
 	script Load_TH3_SI
 		load_level Level_TH3_SI
@@ -2134,19 +2151,148 @@
     // ---------------------------------------------------
     // - THPS2 Skate Heaven
     // ---------------------------------------------------
-	Level_Hvn = {
-		structure_name = Level_Hvn
-		load_script = Load_Hvn
+	level_th2_hvn = {
+		structure_name = level_th2_hvn
+		load_script = load_th2_hvn
 		name = "* Skate Heaven"
 		loading_screen = "loadscrn_generic"
 		loading_time = 8.5
-		level = "Hvn"
-		sky = "Hvn_Sky"
-		qb = "levels\Hvn\Hvn.qb"
-		level_qb = "levels\Hvn\Hvn_scripts.qb"
-		startup_script = Hvn_Startup
-		goals_script = Hvn_goals
-		setup_script = Hvn_setup
+		level = "TH2_Hvn"
+		sky = "TH2_Hvn_Sky"
+		qb = "levels\TH2_Hvn\TH2_Hvn.qb"
+		level_qb = "levels\TH2_Hvn\TH2_Hvn_scripts.qb"
+		startup_script = TH2_Hvn_Startup
+		goals_script = TH2_Hvn_goals
+		setup_script = TH2_Hvn_setup
+		default_stats = 5
+		level_number = LevelNum_Default
+		ambient_red = 72
+		ambient_green = 72
+		ambient_blue = 72
+		ambient_mod_factor = 0.2
+		heading_0 = -30
+		pitch_0 = -60
+		red_0 = 110
+		green_0 = 110
+		blue_0 = 105
+		mod_factor_0 = 0.89999998
+		heading_1 = 200
+		pitch_1 = 33
+		red_1 = 23
+		green_1 = 24
+		blue_1 = 30
+		mod_factor_1 = 0.89999998
+		fog_red = 0
+		fog_green = 0
+		fog_blue = 0
+		fog_alpha = 0
+		fog_dist = 0
+		num_m_heads = 4
+		num_m_torsos = 4
+		num_m_legs = 4
+	}
+    // ---------------------------------------------------
+    // - THPS2 New York
+    // ---------------------------------------------------
+	level_th2_ny = {
+		structure_name = level_th2_ny
+		load_script = load_th2_ny
+		name = "* New York"
+		loading_screen = "loadscrn_generic"
+		loading_time = 8.5
+		level = "TH2_NY"
+		sky = "TH2_NY_Sky"
+		qb = "levels\TH2_NY\TH2_NY.qb"
+		level_qb = "levels\TH2_NY\TH2_NY_scripts.qb"
+		startup_script = TH2_NY_Startup
+		goals_script = TH2_NY_goals
+		setup_script = TH2_NY_setup
+		default_stats = 5
+		level_number = LevelNum_Default
+		ambient_red = 72
+		ambient_green = 72
+		ambient_blue = 72
+		ambient_mod_factor = 0.2
+		heading_0 = -30
+		pitch_0 = -60
+		red_0 = 110
+		green_0 = 110
+		blue_0 = 105
+		mod_factor_0 = 0.89999998
+		heading_1 = 200
+		pitch_1 = 33
+		red_1 = 23
+		green_1 = 24
+		blue_1 = 30
+		mod_factor_1 = 0.89999998
+		fog_red = 0
+		fog_green = 0
+		fog_blue = 0
+		fog_alpha = 0
+		fog_dist = 0
+		num_m_heads = 4
+		num_m_torsos = 4
+		num_m_legs = 4
+	}
+    // ---------------------------------------------------
+    // - THPS2X Rooftops
+    // ---------------------------------------------------
+	level_th2x_roof = {
+		structure_name = level_th2x_roof
+		load_script = load_th2x_roof
+		name = "* Rooftops"
+		loading_screen = "loadscrn_generic"
+		loading_time = 8.5
+		level = "TH2X_Roof"
+		sky = "TH2X_Roof_Sky"
+		qb = "levels\TH2X_Roof\TH2X_Roof.qb"
+		level_qb = "levels\TH2X_Roof\TH2X_Roof_scripts.qb"
+		startup_script = TH2X_Roof_Startup
+		goals_script = TH2X_Roof_goals
+		setup_script = TH2X_Roof_setup
+		default_stats = 5
+		level_number = LevelNum_Default
+		ambient_red = 72
+		ambient_green = 72
+		ambient_blue = 72
+		ambient_mod_factor = 0.2
+		heading_0 = -30
+		pitch_0 = -60
+		red_0 = 110
+		green_0 = 110
+		blue_0 = 105
+		mod_factor_0 = 0.89999998
+		heading_1 = 200
+		pitch_1 = 33
+		red_1 = 23
+		green_1 = 24
+		blue_1 = 30
+		mod_factor_1 = 0.89999998
+		fog_red = 0
+		fog_green = 0
+		fog_blue = 0
+		fog_alpha = 0
+		fog_dist = 0
+		num_m_heads = 4
+		num_m_torsos = 4
+		num_m_legs = 4
+	}
+    // ---------------------------------------------------
+    // - THPS2X SPoT
+    // ---------------------------------------------------
+	level_th2x_spot = {
+		structure_name = level_th2x_spot
+		load_script = load_th2x_spot
+		name = "* spottops"
+		loading_screen = "loadscrn_generic"
+		loading_time = 8.5
+		level = "TH2X_spot"
+		sky = "TH2X_spot_Sky"
+		qb = "levels\TH2X_spot\TH2X_spot.qb"
+		level_qb = "levels\TH2X_spot\TH2X_spot_scripts.qb"
+		startup_script = TH2X_spot_Startup
+		goals_script = TH2X_spot_goals
+		setup_script = TH2X_spot_setup
 		default_stats = 5
 		level_number = LevelNum_Default
 		ambient_red = 72
@@ -2188,7 +2334,7 @@
         sky = "UP_Alc_Sky" 
         pre = "NY.pre" 
         qb = "levels\UP_Alc\UP_Alc.qb" 
-        pedpre = "NYped.pre" 
+        pre = "ped_anims.pre"
         level_qb = "levels\UP_Alc\UP_Alc_scripts.qb" 
         level_sfx_qb = "levels\UP_Alc\UP_Alc_sfx.qb" 
         startup_script = DevLevel_Startup 
@@ -2321,6 +2467,7 @@
 		loading_screen = "loadscrn_generic"
 		loading_time = 8.5
 		level = "DevLevel"
+        pre = "ped_anims.pre"
 		sky = "NJ_Sky"
 		qb = "levels\DevLevel\DevLevel.qb"
 		level_qb = "levels\DevLevel\DevLevel_scripts.qb"
@@ -2370,6 +2517,47 @@
 		startup_script = TH2_Han_Startup
 		goals_script = TH2_Han_goals
 		setup_script = TH2_Han_setup
+		default_stats = 5
+		level_number = LevelNum_Default
+		ambient_red = 72
+		ambient_green = 72
+		ambient_blue = 72
+		ambient_mod_factor = 0.2
+		heading_0 = -30
+		pitch_0 = -60
+		red_0 = 110
+		green_0 = 110
+		blue_0 = 105
+		mod_factor_0 = 0.89999998
+		heading_1 = 200
+		pitch_1 = 33
+		red_1 = 23
+		green_1 = 24
+		blue_1 = 30
+		mod_factor_1 = 0.89999998
+		fog_red = 0
+		fog_green = 0
+		fog_blue = 0
+		fog_alpha = 0
+		fog_dist = 0
+		num_m_heads = 4
+		num_m_torsos = 4
+		num_m_legs = 4
+	}
+    Level_TH2_SSV = {
+		structure_name = Level_TH2_SSV
+		load_script = Load_TH2_SSV
+		name = "Skatestreet"
+		loading_screen = "loadscrn_generic"
+		loading_time = 8.5
+        pre = "ped_anims.pre"
+		level = "TH2_SSV"
+		sky = "TH2_SSV_Sky"
+		qb = "levels\TH2_SSV\TH2_SSV.qb"
+		level_qb = "levels\TH2_SSV\TH2_SSV_scripts.qb"
+		startup_script = TH2_SSV_Startup
+		goals_script = TH2_SSV_goals
+		setup_script = TH2_SSV_setup
 		default_stats = 5
 		level_number = LevelNum_Default
 		ambient_red = 72

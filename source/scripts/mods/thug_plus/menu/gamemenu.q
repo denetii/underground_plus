@@ -3731,6 +3731,22 @@
 		{text = "Manhattan" level_num = 2 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_ny}
 		{text = "Tampa" level_num = 3 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_FL level = load_fl}
 	]
+    // Base game levels - Used by game_progress_menu to ensure we only look at base levels for story mode info
+	base_game_level_info = [
+		{text = "New Jersey" level_num = 1 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_nj}
+		{text = "Manhattan" level_num = 2 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NY level = load_ny}
+		{text = "Tampa" level_num = 3 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_FL level = load_fl}
+		{text = "San Diego" level_num = 4 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SD level = load_sd}
+		{text = "Hawaii" level_num = 5 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_hi}
+		{text = "Vancouver" level_num = 6 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_VC level = load_vc}
+		{text = "Slam City Jam" level_num = 7 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SP level = load_sj}
+		{text = "Moscow" level_num = 8 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_RU level = load_ru}
+		{text = "Hotter Than Hell" level_num = 10 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SE level = load_se}
+		{text = "Created Park" level_num = 11 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SCH level = load_sk5ed_gameplay}
+		{text = "School II" level_num = 15 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_SC2}
+		{text = "Venice" level_num = 16 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_VN level = load_VN}
+		{text = "Hangar" level_num = 17 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HN level = load_HN}
+    ]
 	level_select_menu_level_info = [
         // THUG1
 		{text = "New Jersey" level_num = 1 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_NJ level = load_nj}
@@ -3853,7 +3869,7 @@
 		{text = "Marseille" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_mar}
 		{text = "New York" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ny}
 		{text = "Venice Beach" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ven}
-		{text = "Skatestreet" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ss}
+		{text = "Skatestreet" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ssv}
 		{text = "Philadelphia" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ph}
 		{text = "Bullring" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_bul}
 		{text = "Chopper Drop" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_cd}

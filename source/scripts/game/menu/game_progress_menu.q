@@ -118,17 +118,17 @@
 		GetCompletionStatusText mode = SKATER_UNLOCKED_CREATURE
 		progress_menu_add_item id1 = progress_vmenu left_col_text = " SICK STORY MODE SECRET:" right_col_text = <completion_status>
 		progress_menu_add_item id1 = progress_vmenu seperator
-		GetArraySize level_select_menu_level_info
+		GetArraySize base_game_level_info
 		<index> = 0
 		while
-			if NOT (((level_select_menu_level_info[<index>]).level) = load_sk5ed_gameplay)
-				<level_num> = ((level_select_menu_level_info[<index>]).level_num)
+			if NOT (((base_game_level_info[<index>]).level) = load_sk5ed_gameplay)
+				<level_num> = ((base_game_level_info[<index>]).level_num)
 				GetLevelNumTapeCollected level = <level_num>
-				if GetGlobalFlag flag = ((level_select_menu_level_info[<index>]).flag)
-					FormatText TextName = level_text " %s SECRET TAPE:" s = ((level_select_menu_level_info[<index>]).text)
+				if GetGlobalFlag flag = ((base_game_level_info[<index>]).flag)
+					FormatText TextName = level_text " %s SECRET TAPE:" s = ((base_game_level_info[<index>]).text)
 				else
 					if (all_levels_unlocked = 1)
-						FormatText TextName = level_text " %s SECRET TAPE:" s = ((level_select_menu_level_info[<index>]).text)
+						FormatText TextName = level_text " %s SECRET TAPE:" s = ((base_game_level_info[<index>]).text)
 					else
 						FormatText TextName = level_text " %s SECRET TAPE:" s = "??????"
 					endif
@@ -157,25 +157,25 @@
 			progress_menu_add_item id1 = progress_vmenu left_col_text = " ?????? OLD SKOOL LEVEL:" check_box = <completion_status>
 		endif
 		progress_menu_add_item id1 = progress_vmenu seperator
-		GetArraySize level_select_menu_level_info
+		GetArraySize base_game_level_info
 		<index> = 0
 		while
-			if NOT (((level_select_menu_level_info[<index>]).level) = load_sk5ed_gameplay)
-				if NOT (((level_select_menu_level_info[<index>]).level) = load_TestLevel)
-					if NOT (((level_select_menu_level_info[<index>]).level) = load_Default)
-						if NOT StructureContains structure = ((level_select_menu_level_info[<index>])) DEVKIT_ONLY
-							<level_num> = ((level_select_menu_level_info[<index>]).level_num)
+			if NOT (((base_game_level_info[<index>]).level) = load_sk5ed_gameplay)
+				if NOT (((base_game_level_info[<index>]).level) = load_TestLevel)
+					if NOT (((base_game_level_info[<index>]).level) = load_Default)
+						if NOT StructureContains structure = ((base_game_level_info[<index>])) DEVKIT_ONLY
+							<level_num> = ((base_game_level_info[<index>]).level_num)
 							GetLevelGapTotals level = <level_num>
 							if (<num_gaps> = 0)
 								<gaps_text> = "0 / ??"
 							else
 								FormatText TextName = gaps_text "%i / %j" i = <num_collected_gaps> j = <num_gaps>
 							endif
-							if GetGlobalFlag flag = ((level_select_menu_level_info[<index>]).flag)
-								FormatText TextName = level_text " %s GAPS:" s = ((level_select_menu_level_info[<index>]).text)
+							if GetGlobalFlag flag = ((base_game_level_info[<index>]).flag)
+								FormatText TextName = level_text " %s GAPS:" s = ((base_game_level_info[<index>]).text)
 							else
 								if (all_levels_unlocked = 1)
-									FormatText TextName = level_text " %s GAPS:" s = ((level_select_menu_level_info[<index>]).text)
+									FormatText TextName = level_text " %s GAPS:" s = ((base_game_level_info[<index>]).text)
 								else
 									FormatText TextName = level_text " %s GAPS:" s = "??????"
 								endif

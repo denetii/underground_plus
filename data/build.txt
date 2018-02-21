@@ -112,6 +112,7 @@
 \scripts\game\menu\mainmenu.qb
 \scripts\mods\thug_plus\menu\memcard.qb
 \scripts\game\menu\memcardmessages.qb
+\scripts\game\menu\menutest.qb
 \scripts\game\menu\MenuSounds.qb
 \scripts\game\menu\netmenu.qb
 \scripts\game\menu\net_vault_menu.qb

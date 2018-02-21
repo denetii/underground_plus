@@ -880,6 +880,12 @@
 			multicolor = 1
 		}
 		{
+			desc_id = board_test
+			frontend_desc = 'Export Test'
+			mesh = "models/UndergroundPlus/cas_boards/board_test.skin"
+			multicolor = 1
+		}
+		{
 			desc_id = Gene
 			frontend_desc = 'Gene'
 			mesh = "models/skater_secret/board_Gene.skin"
