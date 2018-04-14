@@ -23,18 +23,20 @@ gfx_settings_custom = [
     { menu_id = gfxmenu_setting_useshaders name = " Use New Shaders" property = UseNewShaders type = toggle break_after = 0 }
     { menu_id = gfxmenu_setting_shaderdetail name = " Shader Quality" property = ShaderDetail type = dropdown value_names = 
         [   "None"
+            "Ultra Low"
             "Low"
             "Medium"
             "High"
             "Ultra" ] 
-        min = 1 max = 4 step = 1 break_after = 0 }
+        min = 1 max = 5 step = 1 break_after = 0 }
     { menu_id = gfxmenu_setting_texturequality name = " Texture Quality" property = TextureQuality type = dropdown value_names = 
         [   "None"
+            "Ultra Low"
             "Low"
             "Medium"
             "High"
             "Ultra" ] 
-        min = 1 max = 4 step = 1 break_after = 0 }
+        min = 1 max = 5 step = 1 break_after = 0 }
     { menu_id = gfxmenu_setting_pp name = " Postprocessing" property = UsePostProcessing type = toggle break_after = 1 }
     { menu_id = gfxmenu_setting_particles name = " Particles" property = ParticlesEnabled type = toggle break_after = 0 }
     { menu_id = gfxmenu_setting_shatter name = " Shatter" property = RenderShatter type = toggle break_after = 0 }
@@ -212,13 +214,13 @@ script gfx_settings_slidedown
         printf "gfx_settings_slidedown: setting parameter not passed!"
         return
     endif
-    printf ((<setting>).name)
+    //printf ((<setting>).name)
     UGPlus_GetPerformanceOption Setting = ((<setting>).property)
     if ( <value> = ((<setting>).min) )
-        return
+        <value> = ( ((<setting>).max) + ((<setting>).step) ) 
     endif
     <value> = ( <value> - ((<setting>).step) )
-    printf (<value>)
+    //printf (<value>)
     UGPlus_SetPerformanceOption Setting = ((<setting>).property) Value = (<value>)
     // Update the UI to reflect the change
     if ( ((<setting>).type) = dropdown )
@@ -230,19 +232,23 @@ script gfx_settings_slidedown
         id = ((<setting>).menu_id)
         text = <gfx_options_cur_value>
     }
+    // The quality setting specifically requires a full update of all setting values
+    if ( (<setting>).menu_id = gfxmenu_setting_quality )
+        gfx_settings_menu_updateall
+    endif
 endscript
 script gfx_settings_slideup
     if NOT GotParam setting
         printf "gfx_settings_slideup: setting parameter not passed!"
         return
     endif
-    printf ((<setting>).name)
+    //printf ((<setting>).name)
     UGPlus_GetPerformanceOption Setting = ((<setting>).property)
     if ( <value> = ((<setting>).max) )
-        return
+        <value> = ( ((<setting>).min) - ((<setting>).step) ) 
     endif
     <value> = ( <value> + ((<setting>).step) )
-    printf (<value>)
+    //printf (<value>)
     UGPlus_SetPerformanceOption Setting = ((<setting>).property) Value = (<value>)
     // Update the UI to reflect the change
     if ( (<setting>).type = dropdown )
@@ -254,6 +260,10 @@ script gfx_settings_slideup
         id = ((<setting>).menu_id)
         text = <gfx_options_cur_value>
     }
+    // The quality setting specifically requires a full update of all setting values
+    if ( (<setting>).menu_id = gfxmenu_setting_quality )
+        gfx_settings_menu_updateall
+    endif
 endscript
 script gfx_settings_toggle
     if NOT GotParam setting
@@ -484,6 +494,41 @@ script gfx_settings_menu_unfocus
         }
     endif
 endscript
+
+// Updates all values in the menu - fired when the generic 'quality' setting is updated
+script gfx_settings_menu_updateall
+    <index> = 0
+    while
+        UGPlus_GetPerformanceOption Setting = ((gfx_settings_custom[<index>]).property) 
+        // Toggle options - on/off checkbox items
+        if ( (gfx_settings_custom[<index>]).type = toggle )
+            if ( <value> = 1 )
+            FormatText ChecksumName = checkmark_rgba "%i_HIGHLIGHTED_TEXT_COLOR" i = (THEME_COLOR_PREFIXES[current_theme_prefix])
+            SetScreenElementProps {
+                id = ((gfx_settings_custom[<index>]).menu_id)
+                rgba = <checkmark_rgba>
+            }
+            else
+                SetScreenElementProps {
+                    id = ((gfx_settings_custom[<index>]).menu_id)
+                    rgba = [0 0 0 0]
+                }
+            endif
+        else
+            if ( (gfx_settings_custom[<index>]).type = dropdown )
+                FormatText TextName = gfx_options_cur_value "%i" i = ((gfx_settings_custom[<index>]).value_names[<value>])
+            else
+                FormatText TextName = gfx_options_cur_value "%i" i = <value>
+            endif
+            SetScreenElementProps {
+                id = ((gfx_settings_custom[<index>]).menu_id)
+                text = <gfx_options_cur_value>
+            }
+        endif
+        <index> = (<index> + 1)
+    repeat 10
+endscript
+
 script gfx_settings_menu_exit
     if ObjectExists id = gfx_anchor
         DestroyScreenElement id = gfx_anchor
