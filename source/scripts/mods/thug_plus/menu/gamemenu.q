@@ -3986,6 +3986,7 @@
 			endif
 		endif
 		make_theme_menu_item text = "Display Options" id = menu_display_options pad_choose_script = launch_display_options_menu pad_choose_params = {from_options}
+		make_theme_menu_item text = "Graphics Options" id = menu_graphics_options pad_choose_script = gfx_settings_menu_create
 		if NOT InNetGame
 			make_theme_menu_item text = "Interface Themes" id = menu_themes pad_choose_script = swap_themes_menu pad_choose_params = {from_options = from_options}
 		endif
@@ -7938,10 +7939,57 @@
 		make_text_sub_menu_item text = "Enter Fly Mode" auto_id pad_choose_script = #"0x8B6A7C82"
 		make_text_sub_menu_item text = "Spawn skater board" auto_id pad_choose_script = ksk_debug_spawn_board
 		make_text_sub_menu_item text = "Pro Trick Objects" auto_id pad_choose_script = create_pro_trick_objects_menu
+		make_text_sub_menu_item text = "Wet mask Test" auto_id pad_choose_script = do_ksk_material_test
+		make_text_sub_menu_item text = "Snow mask Test" auto_id pad_choose_script = do_ksk_snowmask_test
+		make_text_sub_menu_item text = "Ice mask Test" auto_id pad_choose_script = do_ksk_icemask_test
+		make_text_sub_menu_item text = "Reset Weather Masks" auto_id pad_choose_script = do_ksk_weathermask_reset
 		make_text_sub_menu_item text = "Done" id = menu_done pad_choose_script = create_pause_menu
 		RunScriptOnScreenElement id = current_menu_anchor animate_in params = {final_pos = (320.0,134.0)}
 	endscript
 	
+    script do_ksk_material_test
+        spawnscript ksk_wetmask_test
+    endscript
+    script do_ksk_snowmask_test
+        spawnscript ksk_snowmask_test
+    endscript
+    script do_ksk_icemask_test
+        spawnscript ksk_icemask_test
+    endscript
+    script do_ksk_weathermask_reset
+        UGPlus_SetMaterialMask type = Wet alpha = 0
+        UGPlus_SetMaterialMask type = Snow alpha = 0
+        UGPlus_SetMaterialMask type = Ice alpha = 0
+    endscript
+    
+    script ksk_wetmask_test
+        wait 1 seconds
+        wetmask_intensity = 0
+        while
+            <wetmask_intensity> = (<wetmask_intensity> + 1)
+            UGPlus_SetMaterialMask type = Wet alpha = <wetmask_intensity>
+            wait 10 gameframes 
+        repeat 128
+    endscript
+    script ksk_snowmask_test
+        wait 1 seconds
+        wetmask_intensity = 0
+        while
+            <wetmask_intensity> = (<wetmask_intensity> + 1)
+            UGPlus_SetMaterialMask type = Snow alpha = <wetmask_intensity>
+            wait 10 gameframes 
+        repeat 255
+    endscript
+    script ksk_icemask_test
+        wait 1 seconds
+        wetmask_intensity = 0
+        while
+            <wetmask_intensity> = (<wetmask_intensity> + 1)
+            UGPlus_SetMaterialMask type = Ice alpha = <wetmask_intensity>
+            wait 10 gameframes 
+        repeat 255
+    endscript
+    
 	script create_ksk_skybox_menu
 		if ObjectExists id = current_menu_anchor
 			DestroyScreenElement id = current_menu_anchor

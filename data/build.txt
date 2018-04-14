@@ -104,6 +104,7 @@
 \scripts\game\menu\edit_skater.qb
 \scripts\game\menu\edit_tricks_menu.qb
 \scripts\mods\thug_plus\menu\thugplus_level_menu.qb
+\scripts\mods\thug_plus\menu\gfx_options.qb
 \scripts\mods\thug_plus\menu\gamemenu.qb
 \scripts\game\menu\game_progress_menu.qb
 \scripts\game\menu\gap_menu.qb
@@ -172,6 +173,7 @@
 \scripts\mods\thug_plus\skater\manualtricks.qb
 \scripts\mods\thug_plus\skater\physics.qb
 \scripts\game\skater\pressuretricks.qb
+\scripts\game\skater\protricks.qb
 \scripts\game\skater\skater_particlesys.qb
 \scripts\game\skater\skater_procanim.qb
 \scripts\game\skater\skater_profile.qb

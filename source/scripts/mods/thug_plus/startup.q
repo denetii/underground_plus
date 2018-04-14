@@ -107,6 +107,7 @@
 		animload_SI_Skull <...>
 	endscript
 	script init_loading_bar
+        printf "init_loading_bar"
 		SetLoadingBarPos x = 258 y = 400
 		SetLoadingBarSize width = 140 height = 8
 		SetLoadingBarStartColor r = 0 g = 76 b = 129
@@ -128,7 +129,7 @@
                 <index> = (<index> + 1)
                 GetElement <customdata_array> Index = <index>
                 <new_item> = <Element>
-                printf "Found item %s" s = (<new_item>.frontend_desc)
+                //printf "Found item %s" s = (<new_item>.frontend_desc)
                 SetArrayElement {ArrayName = part_list
                             index = <index>
                             newvalue = <new_item>
@@ -136,54 +137,11 @@
             repeat 10
         repeat <array_size>
         
-        /*
-        WORKING!
-        casdata_array = skater_f_head
-        <customdata_array> = cas_custom_skater_f_head
-        <index> = 0
-        while
-            <index> = (<index> + 1)
-            GetElement <customdata_array> Index = <index>
-            <new_item> = <Element>
-            printf "Found item %s" s = (<new_item>.frontend_desc)
-            SetArrayElement {ArrayName = casdata_array
-                            index = <index>
-                            newvalue = <new_item>
-                        }
-        repeat 10*/
     endscript
     
 	script startup_loading_screen
-		/*if NOT Bootstrap
-			if IsPS2
-				if CD
-					Displayloadingscreen blank
-					PlayMovie "movies\atvi"
-					PlayMovie "movies\nslogo"
-					PlayMovie "movies\intro"
-				endif
-			endif
-		endif
-		if isXbox
-			if CD
-				if NOT IsInternetGameHost
-					if NOT IsJoiningInternetGame
-						PlayMovie "movies\atvi"
-						PlayMovie "movies\nslogo"
-						PlayMovie "movies\beenox"
-						PlayMovie "movies\intro"
-					endif
-				endif
-			endif
-		endif
-		if IsNgc
-			if CD
-				PlayMovie "movies\atvi"
-				PlayMovie "movies\nslogo"
-				PlayMovie "movies\intro"
-			endif
-		endif*/
-		if Bootstrap
+        printf "startup_loading_screen"
+		/*if Bootstrap
 			Displayloadingscreen "loadscrn_demo"
 		else
 			if isXbox
@@ -194,18 +152,24 @@
 			endif
 			if IsPS2
 			endif
-		endif
+		endif*/
         
         printf "Testing screen resolution..."
         // Set widescreen if the current screen resolution is 1080p
         if (LAUNCHER_SETTING_RESOLUTION = 0)
-            printf "1080p detected - setting widescreen mode!"
+            printf "Setting widescreen mode!"
             screen_setup_widescreen
         else
             printf "Setting square mode!"
             //screen_setup_standard
         endif
         
+        UGPlus_TestFunction
+        UGPlus_GetPerformanceOption { Setting = UseDistanceClipping }
+        printf "UseDistanceClipping: %s" s = (<Value>)
+        UGPlus_GetPerformanceOption { Setting = ClippingDistance }
+        printf "ClippingDistance: %s" s = (<Value>)
+        UGPlus_SetOneButtonSpine enabled = 1
         // Set UG+ custom CAS items & levels here!
         set_custom_cas_items
 	endscript

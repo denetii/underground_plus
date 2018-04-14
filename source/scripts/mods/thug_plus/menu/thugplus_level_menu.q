@@ -2,31 +2,31 @@
 	THUGPLUS_LEVEL_PAGELIMIT = 12
 	
 	THUGPLUS_LEVELS_TH1 = [
-		{text = "Warehouse" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_ware}
-		{text = "School I" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_sc}
+		{text = "Warehouse" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_ware}
+		{text = "School I" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_sc1}
 		{text = "The Mall" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_mall}
-		{text = "Downtown" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_dt}
+		{text = "Downtown" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_dt}
 		{text = "Downhill Jam" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_dhj}
 		{text = "Burnside" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_burn}
 		{text = "Streets" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_sf1}
 		{text = "Roswell" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th1_ros}
 	]
 	THUGPLUS_LEVELS_TH2 = [
-		{text = "Hangar" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_han}
-		{text = "School II" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_sc2}
+		{text = "Hangar" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_han}
+		{text = "School II" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_sc2}
 		{text = "Marseille" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_mar}
 		{text = "New York" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ny}
 		{text = "Venice Beach" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ven}
 		{text = "Skatestreet" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ssv}
-		{text = "Philadelphia" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ph}
-		{text = "Bullring" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_bul}
+		{text = "Philadelphia" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_ph}
+		{text = "Bullring" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_bul}
 		{text = "Chopper Drop" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2_cd}
 		{text = "Skate Heaven" level_num = 0 points_to_unlock = 0 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_SC2 level = load_th2_hvn}
 	]
 	THUGPLUS_LEVELS_TH2X = [
-		{text = "Construction Site" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2x_cons}
-		{text = "Night Club" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2x_club}
-		{text = "Subway" cross_it_out = 1 level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2x_sub}
+		{text = "Construction Site" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2x_cons}
+		{text = "Night Club" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2x_club}
+		{text = "Subway" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2x_sub}
 		{text = "Rooftops" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2x_roof}
 		{text = "SPoT" level_num = 0 points_to_unlock = 8 num_am_goals = 0 num_goals = 0 flag = LEVEL_UNLOCKED_HI level = load_th2x_spot}
 	]

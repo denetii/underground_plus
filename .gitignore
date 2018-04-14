@@ -3,3 +3,5 @@ BuildQB.ps1
 *.exe
 *.dll
 *.lnk
+*.ps1
+*.cdb

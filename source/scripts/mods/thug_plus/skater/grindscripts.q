@@ -318,10 +318,15 @@
 				PlayAnim Anim = <initanim> BlendPeriod = 0.30000001 Speed = <InitSpeed>
 			endif
 		endif
-		DoBalanceTrick ButtonA = Right ButtonB = Left Type = <Type> DoFlipCheck
+		
 		if GotParam IsATap
-			AdjustBalance TimeAdd = 0 SpeedMult = 0.5 LeanMult = 0.5
+			DoBalanceTrick ButtonA = Right ButtonB = Left Type = <Type> DoFlipCheck ClearCheese
+		else
+			DoBalanceTrick ButtonA = Right ButtonB = Left Type = <Type> DoFlipCheck
 		endif
+        //if GotParam IsATap
+		//	AdjustBalance TimeAdd = 0 SpeedMult = 0.5 LeanMult = 0.5
+		//endif
 		
 		UndergroundPlus_IfPressedRailStall
 		if (<ksk_is_held> = 1)

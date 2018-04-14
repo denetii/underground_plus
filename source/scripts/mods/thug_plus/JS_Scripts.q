@@ -470,7 +470,7 @@
 			name = "Snow"
 			rain_rate = 0
 			splash_rate = 0.0
-			snow_rate = 30
+			snow_rate = 3000
 		}
 	]
 	ksk_weather_defaults = {
@@ -557,7 +557,7 @@
 				Diff = <WEATHER_SPEED>
 				Proportion = 0
 				if GetNextArrayElement ksk_weather_array
-					if is_cloudy = 1
+					if (is_cloudy = 1)
 						if (<first_item_weather> = 0)
 							<first_item> = <ksk_weather_none>
 							<first_item_weather> = 1

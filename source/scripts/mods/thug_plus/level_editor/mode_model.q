@@ -4,26 +4,39 @@
 	
 	
 	le_models = [
-		{name = "QP" model = "UndergroundPlus\QP_Normal\QP_Normal.mdl"}
-		{name = "Mini QP" model = "UndergroundPlus\MiniQP\MiniQP.mdl"}
-		{name = "Spine Square" model = "UndergroundPlus\Spine_Square\Spine_Square.mdl"}
-		{name = "Kicker 1" model = "UndergroundPlus\KickerWood\KickerWood.mdl"}
-		{name = "Wavy Rail" model = "UndergroundPlus\CurvyRail\CurvyRail.mdl"}
-		{name = "Round Rail" model = "UndergroundPlus\RoundRail\RoundRail.mdl"}
-		{name = "Platform - Small" model = "UndergroundPlus\Platform_Small\Platform_Small.mdl"}
-		{name = "Platform - Large" model = "UndergroundPlus\Platform_Med\Platform_Med.mdl"}
-		{name = "Log Rail" model = "UndergroundPlus\LogRail\LogRail.mdl"}
-		{name = "Funbox 1" model = "UndergroundPlus\Funbox1\Funbox1.mdl"}
-		{name = "Funbox 2" model = "UndergroundPlus\Funbox2\Funbox2.mdl"}
-		{name = "Funbox 3" model = "UndergroundPlus\Funbox3\Funbox3.mdl"}
-		{name = "Funbox 4" model = "UndergroundPlus\Funbox4\Funbox4.mdl"}
-		{name = "Funbox QP" model = "UndergroundPlus\FunboxQP\FunboxQP.mdl"}
-		{name = "Pool Big" model = "UndergroundPlus\PoolBig\PoolBig.mdl"}
-		{name = "Aus HP" model = "UndergroundPlus\Aus_HP\Aus_HP.mdl"}
-		{name = "Boston Spine" model = "UndergroundPlus\Boston_Spine\Boston_Spine.mdl"}
-		{name = "LA Fountain" model = "UndergroundPlus\LA_Fountain\LA_Fountain.mdl"}
-		{name = "HD Plane" model = "UndergroundPlus\HD_Plane\HD_Plane.mdl" }
-		{name = "Flower Cart" model = "veh\veh_sdkart_gardens\veh_sdkart_gardens.mdl" skeletonName = car fixdisplay = 1}
+		{name = "QP" model = "UndergroundPlus\LevelEditor\QP_Normal\QP_Normal.mdl"}
+		{name = "Mini QP" model = "UndergroundPlus\LevelEditor\MiniQP\MiniQP.mdl"}
+		{name = "Spine Square" model = "UndergroundPlus\LevelEditor\Spine_Square\Spine_Square.mdl"}
+		{name = "Kicker 1" model = "UndergroundPlus\LevelEditor\KickerWood\KickerWood.mdl"}
+		{name = "Wavy Rail" model = "UndergroundPlus\LevelEditor\CurvyRail\CurvyRail.mdl"}
+		{name = "Round Rail" model = "UndergroundPlus\LevelEditor\RoundRail\RoundRail.mdl"}
+		{name = "Platform - Small" model = "UndergroundPlus\LevelEditor\Platform_Small\Platform_Small.mdl"}
+		{name = "Platform - Large" model = "UndergroundPlus\LevelEditor\Platform_Med\Platform_Med.mdl"}
+		{name = "Log Rail" model = "UndergroundPlus\LevelEditor\LogRail\LogRail.mdl"}
+		{name = "Funbox 1" model = "UndergroundPlus\LevelEditor\Funbox1\Funbox1.mdl"}
+		{name = "Funbox 2" model = "UndergroundPlus\LevelEditor\Funbox2\Funbox2.mdl"}
+		{name = "Funbox 3" model = "UndergroundPlus\LevelEditor\Funbox3\Funbox3.mdl"}
+		{name = "Funbox 4" model = "UndergroundPlus\LevelEditor\Funbox4\Funbox4.mdl"}
+		{name = "Funbox QP" model = "UndergroundPlus\LevelEditor\FunboxQP\FunboxQP.mdl"}
+		{name = "Pool Big" model = "UndergroundPlus\LevelEditor\PoolBig\PoolBig.mdl"}
+		{name = "Aus HP" model = "UndergroundPlus\LevelEditor\Aus_HP\Aus_HP.mdl"}
+		{name = "Boston Spine" model = "UndergroundPlus\LevelEditor\Boston_Spine\Boston_Spine.mdl"}
+		{name = "LA Fountain" model = "UndergroundPlus\LevelEditor\LA_Fountain\LA_Fountain.mdl"}
+		{name = "HD Plane" model = "UndergroundPlus\LevelEditor\HD_Plane\HD_Plane.mdl" }
+		
+		{name = "Skateshop" model = "levels\skateshop.mdl"}
+		{name = "Warehouse" model = "UndergroundPlus\Levels\Ware\Ware.mdl"}
+		{name = "Bedroom" model = "levels\CAS_BEDROOM.mdl"}
+		{name = "Sk5Ed Shell" model = "levels\Sk5ed_shell.mdl"}
+		{name = "Sk5Ed2 Shell" model = "levels\Sk5ed2_shell.mdl"}
+		{name = "Sk5Ed3 Shell" model = "levels\Sk5ed3_shell.mdl"}
+		{name = "Sk5Ed4 Shell" model = "levels\Sk5ed4_shell.mdl"}
+		{name = "Hangar" model = "levels\HN.mdl"}
+		{name = "School" model = "levels\SC.mdl"}
+		{name = "Venice" model = "levels\VN.mdl"}
+		//{name = "Board" model = "Board_default\Board_default.mdl"}
+        
+        /*{name = "Flower Cart" model = "veh\veh_sdkart_gardens\veh_sdkart_gardens.mdl" skeletonName = car fixdisplay = 1}
 		{name = "NY Test" model = "veh\ny\Veh_WRX_BB\Veh_WRX_BB.mdl"}
 		{name = "Hawaii Bus" model = "veh\hi\Veh_Bus_HI\Veh_Bus_HI.mdl" skeletonName = car type = Bus fixdisplay = 1}
 		{name = "DC Truck" model = "veh\Veh_DCShoeTruck\Veh_DCShoeTruck.mdl" skeletonName = car fixdisplay = 1}
@@ -52,17 +65,7 @@
 		{name = "Trolley Cart" model = "veh\veh_trolley\veh_trolley.mdl"}
 		{name = "SCJ Truck" model = "veh\Veh_SlamCityTruck\Veh_SlamCityTruck.mdl" skeletonName = car fixdisplay = 1}
 		{name = "Blimp" model = "veh\Veh_Blimp\Veh_Blimp.mdl" skeletonName = car}
-		{name = "Board" model = "Board_default\Board_default.mdl"}
-		{name = "Sk5Ed" model = "levels\sk5ed.mdl"}
-		{name = "Skateshop" model = "levels\skateshop.mdl"}
-		{name = "Bedroom" model = "levels\CAS_BEDROOM.mdl"}
-		{name = "Sk5Ed Shell" model = "levels\Sk5ed_shell.mdl"}
-		{name = "Sk5Ed2 Shell" model = "levels\Sk5ed2_shell.mdl"}
-		{name = "Sk5Ed3 Shell" model = "levels\Sk5ed3_shell.mdl"}
-		{name = "Sk5Ed4 Shell" model = "levels\Sk5ed4_shell.mdl"}
-		{name = "Hangar" model = "levels\HN.mdl"}
-		{name = "School" model = "levels\SC.mdl"}
-		{name = "Venice" model = "levels\VN.mdl"}
+        */
 	]
 	
 	selected_model = 0
@@ -212,7 +215,7 @@
 		if (<skeleton_name> = "none")
 			CreateCompositeObject {
 				Components = [
-					{component = model model = (<Element>.model)}
+					{component = model model = (<Element>.model) UseModelLights ShadowVolume }
 					{component = modellightupdate}
 					{component = motion}
 					{component = collision Class = LevelGeometry CollisionMode = Geometry}
@@ -223,6 +226,8 @@
 			}
 			<mangled_id>::Obj_SetPosition position = <Pos>
 			<mangled_id>::Obj_Rotate absolute = (<Angle> * (0.0,1.0,0.0))
+			//<mangled_id>::Obj_EnableDiffuseLight
+			//<mangled_id>::Obj_SetLightAmbientColor r = 255 g = 10 b = 4
 		else
 			le_node_pos = {
 				Pos = <Pos>

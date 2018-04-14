@@ -22,6 +22,7 @@
 	fog_blue = 128
 	fog_alpha = 0
 	fog_dist = 0
+	fog_dist_end = 0
 	fog_state = 0
 	sky_red = 128
 	sky_green = 128
@@ -66,6 +67,41 @@
 	snow_green = 128
 	snow_blue = 128
 	snow_alpha = 128
+    
+    // ******************************************************************
+    // UG+ post-processing settings!
+    // -------------------------------------------------
+    // - BLOOM
+    // -------------------------------------------------
+    pp_bloom_enabled = 1
+    pp_bloom_intensity = 0.3
+    pp_bloom_threshold = 0.3
+    pp_bloom_r = 0.5
+    pp_bloom_g = 0.5
+    pp_bloom_b = 0.5
+    
+    // -------------------------------------------------
+    // - TONEMAPPING
+    // -------------------------------------------------
+    pp_tonemap_enabled = 1
+    pp_tonemap_gamma = 1.0
+    pp_tonemap_exposure = 0.0
+    pp_tonemap_saturation = 0.0
+    pp_tonemap_bleach = 0.0
+    pp_tonemap_defog = 0.0
+    pp_tonemap_r = 0.0
+    pp_tonemap_g = 0.0
+    pp_tonemap_b = 0.0
+    
+    // -------------------------------------------------
+    // - LENS DISTORTION
+    // -------------------------------------------------
+    pp_ca_enabled = 1
+    pp_ca_coeff = 0.12
+    pp_ca_intensity = 0.15
+    // ******************************************************************
+    
+    
 	script launch_lighting_tool
 		UnpauseGame
 		makeskatergoto freezeskater
@@ -115,6 +151,12 @@
 				menu_title = "SNOW"
 			case 12
 				menu_title = "SNOW COLOR"
+			case 13
+				menu_title = "POSTPROCESS - BLOOM"
+			case 14
+				menu_title = "POSTPROCESS - TONEMAP"
+			case 15
+				menu_title = "POSTPROCESS - LENS DISTORTION"
 			default
 				change current_lighting = 0
 				create_lighting_tool
@@ -190,12 +232,13 @@
 				make_light_tool_item text = "green" id = menu_green value = lev_green pad_choose_script = incr_color_val
 				make_light_tool_item text = "blue" id = menu_blue value = lev_blue pad_choose_script = incr_color_val
 			case 4
+				make_light_tool_item text = "enabled" id = menu_fog value = <fog_text> pad_choose_script = incr_color_val
 				make_light_tool_item text = "red" id = menu_red value = fog_red pad_choose_script = incr_color_val
 				make_light_tool_item text = "green" id = menu_green value = fog_green pad_choose_script = incr_color_val
 				make_light_tool_item text = "blue" id = menu_blue value = fog_blue pad_choose_script = incr_color_val
 				make_light_tool_item text = "alpha" id = menu_alpha value = fog_alpha pad_choose_script = incr_color_val
-				make_light_tool_item text = "distance" id = menu_exp value = fog_dist pad_choose_script = incr_color_val
-				make_light_tool_item text = "fog" id = menu_fog value = <fog_text> pad_choose_script = incr_color_val
+				make_light_tool_item text = "start" id = menu_exp value = fog_dist pad_choose_script = incr_color_val params = { step = 10 }
+				make_light_tool_item text = "end" id = menu_fog_end value = fog_dist_end pad_choose_script = incr_color_val params = { step = 100 }
 			case 5
 				make_light_tool_item text = "red" id = menu_red value = sky_red pad_choose_script = incr_color_val
 				make_light_tool_item text = "green" id = menu_green value = sky_green pad_choose_script = incr_color_val
@@ -263,6 +306,32 @@
 				make_light_tool_item text = "green" id = menu_green value = snow_green pad_choose_script = incr_rain_color params = {snow}
 				make_light_tool_item text = "blue" id = menu_blue value = snow_blue pad_choose_script = incr_rain_color params = {snow}
 				make_light_tool_item text = "alpha" id = menu_alpha value = snow_alpha pad_choose_script = incr_rain_color params = {snow}
+                
+            // POSTPROCESSING: BLOOM
+			case 13
+				make_light_tool_item text = "enabled" id = menu_pp_bloom_enabled value = pp_bloom_enabled pad_choose_script = pp_toggle_effect params = {name = Bloom menu_item = menu_pp_bloom_enabled }
+				make_light_tool_item text = "intensity" id = menu_pp_bloom_intensity value = pp_bloom_intensity pad_choose_script = pp_incr_effect params = { max = 1.0}
+				make_light_tool_item text = "threshold" id = menu_pp_bloom_threshold value = pp_bloom_threshold pad_choose_script = pp_incr_effect 
+				make_light_tool_item text = "red" id = menu_pp_bloom_r value = pp_bloom_r pad_choose_script = pp_incr_effect params = {max = 1.0}
+				make_light_tool_item text = "green" id = menu_pp_bloom_g value = pp_bloom_g pad_choose_script = pp_incr_effect params = {max = 1.0}
+				make_light_tool_item text = "blue" id = menu_pp_bloom_b value = pp_bloom_b pad_choose_script = pp_incr_effect params = {max = 1.0}
+            // POSTPROCESSING: TONEMAPPING
+			case 14
+				make_light_tool_item text = "enabled" id = menu_pp_tonemap_enabled value = pp_tonemap_enabled pad_choose_script = pp_toggle_effect params = {name = tonemap menu_item = menu_pp_tonemap_enabled }
+				make_light_tool_item text = "gamma" id = menu_pp_tonemap_gamma value = pp_tonemap_gamma pad_choose_script = pp_incr_effect params = { min = 0.1 max = 4.0}
+				make_light_tool_item text = "exposure" id = menu_pp_tonemap_exposure value = pp_tonemap_exposure pad_choose_script = pp_incr_effect params = { min = -1.0 } 
+				make_light_tool_item text = "saturation" id = menu_pp_tonemap_saturation value = pp_tonemap_saturation pad_choose_script = pp_incr_effect params = { min = -2.0 }
+				make_light_tool_item text = "bleach" id = menu_pp_tonemap_bleach value = pp_tonemap_bleach pad_choose_script = pp_incr_effect 
+				make_light_tool_item text = "defog" id = menu_pp_tonemap_defog value = pp_tonemap_defog pad_choose_script = pp_incr_effect params = { min = -1.0 }
+				make_light_tool_item text = "red" id = menu_pp_tonemap_r value = pp_tonemap_r pad_choose_script = pp_incr_effect params = {max = 1.0}
+				make_light_tool_item text = "green" id = menu_pp_tonemap_g value = pp_tonemap_g pad_choose_script = pp_incr_effect params = {max = 1.0}
+				make_light_tool_item text = "blue" id = menu_pp_tonemap_b value = pp_tonemap_b pad_choose_script = pp_incr_effect params = {max = 1.0}
+			// POSTPROCESSING: LENS DISTORTION
+            case 15
+				make_light_tool_item text = "enabled" id = menu_pp_ca_enabled value = pp_ca_enabled pad_choose_script = pp_toggle_effect params = {name = LensDistortion menu_item = menu_pp_ca_enabled }
+				make_light_tool_item text = "coeff" id = menu_pp_ca_coeff value = pp_ca_coeff pad_choose_script = pp_incr_effect params = { min = -1.0 max = 1.0}
+				make_light_tool_item text = "intensity" id = menu_pp_ca_intensity value = pp_ca_intensity pad_choose_script = pp_incr_effect params = { max = 1.0}
+            
 			default
 				change current_lighting = 0
 				create_lighting_tool
@@ -382,13 +451,14 @@
 		change fog_blue = 128
 		change fog_alpha = 50
 		change fog_dist = 15
+		change fog_dist_end = 55000
 		change sky_red = 128
 		change sky_green = 128
 		change sky_blue = 128
 		get_level_light_values
 		launch_lighting_tool
 	endscript
-	script next_light max = 12
+	script next_light max = 15
 		if GotParam left
 			change current_lighting = (current_lighting - 1)
 		else
@@ -449,6 +519,222 @@
 			scale = <scale>
 		}
 	endscript
+    
+    // ----------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------
+    script pp_incr_effect step = 0.01 max = 2 min = 0
+		GetTags
+		removeparameter random_effect_done
+		if GotParam reverse
+			step = (-1 * <step>)
+		endif
+		step = (<step> * step_multiplier)
+		switch <id>
+        
+            // ****************************************
+            // BLOOM
+			case menu_pp_bloom_intensity
+				change pp_bloom_intensity = (pp_bloom_intensity + <step>)
+				if (pp_bloom_intensity > <max>)
+					change pp_bloom_intensity = <max>
+				endif
+				if (<min> > pp_bloom_intensity)
+					change pp_bloom_intensity = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_bloom_intensity
+                UGPlus_SetPostProcessValue { EffectName = Bloom Property = pp_bloom_intensity Value = (pp_bloom_intensity) }
+			case menu_pp_bloom_threshold
+				change pp_bloom_threshold = (pp_bloom_threshold + <step>)
+				if (pp_bloom_threshold > <max>)
+					change pp_bloom_threshold = <max>
+				endif
+				if (<min> > pp_bloom_threshold)
+					change pp_bloom_threshold = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_bloom_threshold
+                UGPlus_SetPostProcessValue { EffectName = Bloom Property = pp_bloom_threshold Value = (pp_bloom_threshold) }
+			case menu_pp_bloom_r
+				change pp_bloom_r = (pp_bloom_r + <step>)
+				if (pp_bloom_r > <max>)
+					change pp_bloom_r = <max>
+				endif
+				if (<min> > pp_bloom_r)
+					change pp_bloom_r = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_bloom_r
+                UGPlus_SetPostProcessValue { EffectName = Bloom Property = pp_bloom_r Value = (pp_bloom_r) }
+			case menu_pp_bloom_g
+				change pp_bloom_g = (pp_bloom_g + <step>)
+				if (pp_bloom_g > <max>)
+					change pp_bloom_g = <max>
+				endif
+				if (<min> > pp_bloom_g)
+					change pp_bloom_g = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_bloom_g
+                UGPlus_SetPostProcessValue { EffectName = Bloom Property = pp_bloom_g Value = (pp_bloom_g) }
+			case menu_pp_bloom_b
+				change pp_bloom_b = (pp_bloom_b + <step>)
+				if (pp_bloom_b > <max>)
+					change pp_bloom_b = <max>
+				endif
+				if (<min> > pp_bloom_b)
+					change pp_bloom_b = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_bloom_b
+                UGPlus_SetPostProcessValue { EffectName = Bloom Property = pp_bloom_b Value = (pp_bloom_b) }
+            // ****************************************
+            // TONEMAPPING
+			case menu_pp_tonemap_gamma
+				change pp_tonemap_gamma = (pp_tonemap_gamma + <step>)
+				if (pp_tonemap_gamma > <max>)
+					change pp_tonemap_gamma = <max>
+				endif
+				if (<min> > pp_tonemap_gamma)
+					change pp_tonemap_gamma = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_tonemap_gamma
+                UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_gamma Value = (pp_tonemap_gamma) }
+			case menu_pp_tonemap_exposure
+				change pp_tonemap_exposure = (pp_tonemap_exposure + <step>)
+				if (pp_tonemap_exposure > <max>)
+					change pp_tonemap_exposure = <max>
+				endif
+				if (<min> > pp_tonemap_exposure)
+					change pp_tonemap_exposure = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_tonemap_exposure
+                UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_exposure Value = (pp_tonemap_exposure) }
+			case menu_pp_tonemap_saturation
+				change pp_tonemap_saturation = (pp_tonemap_saturation + <step>)
+				if (pp_tonemap_saturation > <max>)
+					change pp_tonemap_saturation = <max>
+				endif
+				if (<min> > pp_tonemap_saturation)
+					change pp_tonemap_saturation = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_tonemap_saturation
+                UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_saturation Value = (pp_tonemap_saturation) }
+            case menu_pp_tonemap_bleach
+				change pp_tonemap_bleach = (pp_tonemap_bleach + <step>)
+				if (pp_tonemap_bleach > <max>)
+					change pp_tonemap_bleach = <max>
+				endif
+				if (<min> > pp_tonemap_bleach)
+					change pp_tonemap_bleach = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_tonemap_bleach
+                UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_bleach Value = (pp_tonemap_bleach) }
+            case menu_pp_tonemap_defog
+				change pp_tonemap_defog = (pp_tonemap_defog + <step>)
+				if (pp_tonemap_defog > <max>)
+					change pp_tonemap_defog = <max>
+				endif
+				if (<min> > pp_tonemap_defog)
+					change pp_tonemap_defog = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_tonemap_defog
+                UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_defog Value = (pp_tonemap_defog) }
+            case menu_pp_tonemap_r
+				change pp_tonemap_r = (pp_tonemap_r + <step>)
+				if (pp_tonemap_r > <max>)
+					change pp_tonemap_r = <max>
+				endif
+				if (<min> > pp_tonemap_r)
+					change pp_tonemap_r = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_tonemap_r
+                UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_r Value = (pp_tonemap_r) }
+            case menu_pp_tonemap_g
+				change pp_tonemap_g = (pp_tonemap_g + <step>)
+				if (pp_tonemap_g > <max>)
+					change pp_tonemap_g = <max>
+				endif
+				if (<min> > pp_tonemap_g)
+					change pp_tonemap_g = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_tonemap_g
+                UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_g Value = (pp_tonemap_g) }
+            case menu_pp_tonemap_b
+				change pp_tonemap_b = (pp_tonemap_b + <step>)
+				if (pp_tonemap_b > <max>)
+					change pp_tonemap_b = <max>
+				endif
+				if (<min> > pp_tonemap_b)
+					change pp_tonemap_b = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_tonemap_b
+                UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_b Value = (pp_tonemap_b) }
+            // ****************************************
+            // LENS DISTORTION
+			case menu_pp_ca_coeff
+				change pp_ca_coeff = (pp_ca_coeff + <step>)
+				if (pp_ca_coeff > <max>)
+					change pp_ca_coeff = <max>
+				endif
+				if (<min> > pp_ca_coeff)
+					change pp_ca_coeff = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_ca_coeff
+                UGPlus_SetPostProcessValue { EffectName = LensDistortion Property = pp_ca_coeff Value = (pp_ca_coeff) }
+			case menu_pp_ca_intensity
+				change pp_ca_intensity = (pp_ca_intensity + <step>)
+				if (pp_ca_intensity > <max>)
+					change pp_ca_intensity = <max>
+				endif
+				if (<min> > pp_ca_intensity)
+					change pp_ca_intensity = <min>
+				endif
+				FormatText TextName = value_text "%i" i = pp_ca_intensity
+                UGPlus_SetPostProcessValue { EffectName = LensDistortion Property = pp_ca_intensity Value = (pp_ca_intensity) }
+            // ****************************************
+            
+                
+		endswitch
+		SetScreenElementProps id = {<id> child = 0} text = <value_text>
+        
+	endscript
+    
+    // *************************************************
+    script pp_toggle_effect 
+		GetTags
+		removeparameter random_effect_done
+        switch <name>
+            case Bloom
+                if (pp_bloom_enabled = 1)
+                    UGPlus_SetPostProcessValue { EffectName = Bloom Property = pp_bloom_enabled Value = 0 }
+                    Change pp_bloom_enabled = 0
+                else
+                    UGPlus_SetPostProcessValue { EffectName = Bloom Property = pp_bloom_enabled Value = 1 }
+                    Change pp_bloom_enabled = 1
+                endif
+                FormatText TextName = value_text "%i" i = pp_bloom_enabled
+            case Tonemap
+                if (pp_tonemap_enabled = 1)
+                    UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_enabled Value = 0 }
+                    Change pp_tonemap_enabled = 0
+                else
+                    UGPlus_SetPostProcessValue { EffectName = Tonemap Property = pp_tonemap_enabled Value = 1 }
+                    Change pp_tonemap_enabled = 1
+                endif
+                FormatText TextName = value_text "%i" i = pp_tonemap_enabled
+            case LensDistortion
+                if (pp_ca_enabled = 1)
+                    UGPlus_SetPostProcessValue { EffectName = LensDistortion Property = pp_ca_enabled Value = 0 }
+                    Change pp_ca_enabled = 0
+                else
+                    UGPlus_SetPostProcessValue { EffectName = LensDistortion Property = pp_ca_enabled Value = 1 }
+                    Change pp_ca_enabled = 1
+                endif
+                FormatText TextName = value_text "%i" i = pp_ca_enabled
+        endswitch
+        
+		SetScreenElementProps id = {<menu_item> child = 0} text = <value_text>
+        
+    endscript
+    // ----------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------
+    
 	script incr_color_val step = 1 max = 128 min = 0
 		GetTags
 		GetCurrentLightingValues
@@ -705,22 +991,32 @@
 						FormatText TextName = value_text "%i" i = fog_alpha
 					case menu_exp
 						change fog_dist = (fog_dist + (0.5 * <step>))
-						if (fog_dist > 1000)
-							change fog_dist = 1000
+						if (fog_dist > fog_dist_end)
+							change fog_dist = fog_dist_end
 						else
-							if (0 > fog_dist)
-								change fog_dist = 0
+							if (-1000 > fog_dist)
+								change fog_dist = -1000
 							endif
 						endif
 						FormatText TextName = value_text "%i" i = fog_dist
+					case menu_fog_end
+						change fog_dist_end = (fog_dist_end + (0.5 * <step>))
+						if (fog_dist_end < fog_dist)
+							change fog_dist_end = fog_dist
+						else
+							if (0 > fog_dist_end)
+								change fog_dist_end = 0
+							endif
+						endif
+						FormatText TextName = value_text "%i" i = fog_dist_end
 					case menu_fog
 						if (fog_state = 0)
 							change fog_state = 1
-							enablefog
+							UGPlus_SetFogEnabled enabled = 1
 							value_text = "on"
 						else
 							change fog_state = 0
-							disablefog
+							UGPlus_SetFogEnabled enabled = 0
 							value_text = "off"
 						endif
 					case menu_all
@@ -803,7 +1099,7 @@
 				lighting color = <color> sky = <sky>
 			case 4
 				SetFogColor r = fog_red b = fog_blue g = fog_green a = fog_alpha
-				SetFogDistance distance = fog_dist
+				UGPlus_SetFogDistance distance_start = fog_dist distance_end = fog_dist_end
 			case 5
 				<color> = (lev_red + (lev_green * 256) + (lev_blue * 65536))
 				<sky> = (sky_red + (sky_green * 256) + (sky_blue * 65536))
@@ -850,6 +1146,8 @@
 		SetDynamicLightModulationFactor ambient value = amb_mod
 		SetDynamicLightModulationFactor directional = 0 value = dir0_mod
 		SetDynamicLightModulationFactor directional = 1 value = dir1_mod
+        
+        //UGPlus_SetPostProcessValue { EffectName = Bloom Intensity = amb_mod }
 	endscript
 	script incr_heading_val step = 1 max = 360 min = 0
 		GetTags
@@ -1008,12 +1306,16 @@
 				change fog_blue = (<tod>.fog_blue)
 				change fog_alpha = (<tod>.fog_alpha)
 				change fog_dist = (<tod>.fog_dist)
+                if StructureContains structure = tod fog_dist_end
+                    change fog_dist_end = (<tod>.fog_dist_end)
+                endif
 			else
 				change fog_red = 0
 				change fog_green = 0
 				change fog_blue = 0
 				change fog_alpha = 0
 				change fog_dist = 0
+				change fog_dist_end = 55000
 			endif
 		else
 			change fog_red = 0
@@ -1021,6 +1323,7 @@
 			change fog_blue = 0
 			change fog_alpha = 0
 			change fog_dist = 0
+            change fog_dist_end = 55000
 		endif
 		change sky_red = 128
 		change sky_green = 128
@@ -1046,7 +1349,7 @@
 			SetLightDiffuseColor index = 1 r = <red_1> g = <green_1> b = <blue_1>
 		endif
 		SetFogColor r = fog_red b = fog_blue g = fog_green a = fog_alpha
-		SetFogDistance distance = fog_dist
+		UGPlus_SetFogDistance distance_start = fog_dist distance_end = fog_dist_end
 	endscript
 	script print_light_values
 		printf " "
@@ -1090,6 +1393,7 @@
 		printf "fog_blue  = %i" i = fog_blue
 		printf "fog_alpha  = %i" i = fog_alpha
 		printf "fog_dist  = %i" i = fog_dist
+		printf "fog_dist_end  = %i" i = fog_dist_end
 		printf " "
 		printf "change rain_rate  = %i" i = rain_rate
 		printf "change rain_frames  = %i" i = rain_frames
