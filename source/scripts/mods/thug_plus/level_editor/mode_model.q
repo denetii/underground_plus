@@ -157,12 +157,14 @@
 			cursor_components = [
 				{component = skeleton skeleton = <skeleton>}
 				{component = model model = <model> UseModelLights}
+				{component = shadow ShadowType = detailed}
 				{component = modellightupdate}
 				{component = motion}
 			]
 		else
 			cursor_components = [
 				{component = model model = <model> UseModelLights}
+				{component = shadow ShadowType = detailed}
 				{component = modellightupdate}
 				{component = motion}
 			]
@@ -215,7 +217,8 @@
 		if (<skeleton_name> = "none")
 			CreateCompositeObject {
 				Components = [
-					{component = model model = (<Element>.model) UseModelLights ShadowVolume }
+					{component = model model = (<Element>.model) UseModelLights }
+                    {component = shadow ShadowType = detailed}
 					{component = modellightupdate}
 					{component = motion}
 					{component = collision Class = LevelGeometry CollisionMode = Geometry}
@@ -237,6 +240,7 @@
 				type = <node_type>
 				model = (<Element>.model)
 				skeletonName = <skeleton_name>
+                ShadowType = detailed
 				NoSkitch
 			}
 			CreateFromStructure <le_node_pos>

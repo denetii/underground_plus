@@ -3987,6 +3987,7 @@
 		endif
 		make_theme_menu_item text = "Display Options" id = menu_display_options pad_choose_script = launch_display_options_menu pad_choose_params = {from_options}
 		make_theme_menu_item text = "Graphics Options" id = menu_graphics_options pad_choose_script = gfx_settings_menu_create
+		make_theme_menu_item text = "Control Options" id = menu_ugplus_ctrl_options pad_choose_script = ctrl_settings_menu_create
 		if NOT InNetGame
 			make_theme_menu_item text = "Interface Themes" id = menu_themes pad_choose_script = swap_themes_menu pad_choose_params = {from_options = from_options}
 		endif
@@ -5455,30 +5456,7 @@
 				SetScreenElementProps id = menu_spintaps_value text = "on"
 			endif
 		endif
-        // Underground+ - Control scheme presets
-		if GotParam ksk_controls
-			if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-				change UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_XBOX
-				SetScreenElementProps id = menu_ksk_controls_value text = "Xbox"
-				set_preferences_from_ui prefs = splitscreen field = "undergroundplus_controls" string = "Xbox"
-			else
-				change UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2
-				SetScreenElementProps id = menu_ksk_controls_value text = "PS2"
-				set_preferences_from_ui prefs = splitscreen field = "undergroundplus_controls" string = "PS2"
-			endif
-		endif
-        // Underground+ - Exit board move toggle
-		if GotParam up_enable_exitboard
-			if (UNDERGROUNDPLUS_ENABLE_EXITBOARD = UNDERGROUNDPLUS_OPTION_ON)
-				change UNDERGROUNDPLUS_ENABLE_EXITBOARD = UNDERGROUNDPLUS_OPTION_OFF
-				SetScreenElementProps id = menu_up_enable_exitboard_value text = UNDERGROUNDPLUS_OPTION_OFF
-				set_preferences_from_ui prefs = splitscreen field = "undergroundplus_enable_exitboard" string = UNDERGROUNDPLUS_OPTION_OFF
-			else
-				change UNDERGROUNDPLUS_ENABLE_EXITBOARD = UNDERGROUNDPLUS_OPTION_ON
-				SetScreenElementProps id = menu_up_enable_exitboard_value text = UNDERGROUNDPLUS_OPTION_ON
-				set_preferences_from_ui prefs = splitscreen field = "undergroundplus_enable_exitboard" string = UNDERGROUNDPLUS_OPTION_ON
-			endif
-		endif
+        
 		if GotParam reverts
 			if NOT (GetGlobalFlag flag = FLAG_EXPERT_MODE_NO_REVERTS)
 				SetGlobalFlag flag = FLAG_EXPERT_MODE_NO_REVERTS
@@ -5561,18 +5539,7 @@
 			else
 				spintaps_value = "off"
 			endif
-            // Underground+ - Control scheme preset
-			if (UNDERGROUNDPLUS_CONTROLS = CONTROL_SCHEME_PS2)
-				ksk_control_value = "PS2"
-			else
-				ksk_control_value = "Xbox"
-			endif
-            // Underground+ - Exit board move toggle
-			if (UNDERGROUNDPLUS_ENABLE_EXITBOARD = UNDERGROUNDPLUS_OPTION_ON)
-				up_exitboard_value = UNDERGROUNDPLUS_OPTION_ON
-			else
-				up_exitboard_value = UNDERGROUNDPLUS_OPTION_OFF
-			endif
+            
 		endif
 		if (<controller_number> = 1)
 			if NOT LevelIs load_skateshop
@@ -5696,64 +5663,6 @@
 				scale = 0.75
 			}
 			
-            // Underground+ - Controls preset
-			CreateScreenElement {
-				type = TextElement
-				parent = menu_ksk_controls
-				id = menu_ksk_controls_value
-				font = small
-				just = [center top]
-				pos = (142.0,-17.0)
-				text = <ksk_control_value>
-				rgba = <text_color>
-			}
-			CreateScreenElement {
-				type = SpriteElement
-				parent = menu_ksk_controls
-				texture = left_arrow
-				rgba = [128 128 128 0]
-				pos = (122.0,-17.0)
-				just = [right top]
-				scale = 0.75
-			}
-			CreateScreenElement {
-				type = SpriteElement
-				parent = menu_ksk_controls
-				texture = right_arrow
-				rgba = [128 128 128 0]
-				pos = (162.0,-17.0)
-				just = [left top]
-				scale = 0.75
-			}
-            // Underground+ - Exit board move toggle
-			CreateScreenElement {
-				type = TextElement
-				parent = menu_up_enable_exitboard
-				id = menu_up_enable_exitboard_value
-				font = small
-				just = [center top]
-				pos = (142.0,-17.0)
-				text = <up_exitboard_value>
-				rgba = <text_color>
-			}
-			CreateScreenElement {
-				type = SpriteElement
-				parent = menu_up_enable_exitboard
-				texture = left_arrow
-				rgba = [128 128 128 0]
-				pos = (122.0,-17.0)
-				just = [right top]
-				scale = 0.75
-			}
-			CreateScreenElement {
-				type = SpriteElement
-				parent = menu_up_enable_exitboard
-				texture = right_arrow
-				rgba = [128 128 128 0]
-				pos = (162.0,-17.0)
-				just = [left top]
-				scale = 0.75
-			}
 		endif
 		if (<controller_number> = 1)
 			if NOT LevelIs load_skateshop
@@ -5994,26 +5903,7 @@
 				]
 				replace_handlers
 			}
-            // Underground+ - Control scheme preset
-			SetScreenElementProps {
-				id = menu_ksk_controls
-				event_handlers = [{pad_left control_change_values params = {ksk_controls controller_number = <controller_number> left}}
-					{pad_right control_change_values params = {ksk_controls controller_number = <controller_number>}}
-					{pad_left <pad_left_2> params = {dir = left}}
-					{pad_right <pad_right_2> params = {dir = right}}
-				]
-				replace_handlers
-			}
-            // Underground+ - Exit board move toggle
-			SetScreenElementProps {
-				id = menu_up_enable_exitboard
-				event_handlers = [{pad_left control_change_values params = {up_enable_exitboard controller_number = <controller_number> left}}
-					{pad_right control_change_values params = {up_enable_exitboard controller_number = <controller_number>}}
-					{pad_left <pad_left_2> params = {dir = left}}
-					{pad_right <pad_right_2> params = {dir = right}}
-				]
-				replace_handlers
-			}
+            
 		endif
 		if (<controller_number> = 1)
 			if NOT LevelIs load_skateshop

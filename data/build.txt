@@ -105,6 +105,7 @@
 \scripts\game\menu\edit_tricks_menu.qb
 \scripts\mods\thug_plus\menu\thugplus_level_menu.qb
 \scripts\mods\thug_plus\menu\gfx_options.qb
+\scripts\mods\thug_plus\menu\control_options.qb
 \scripts\mods\thug_plus\menu\gamemenu.qb
 \scripts\game\menu\game_progress_menu.qb
 \scripts\game\menu\gap_menu.qb

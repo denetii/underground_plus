@@ -1,4 +1,13 @@
 
+    script car_add_components
+        CreateComponentFromStructure component = shadow ShadowType = detailed
+    endscript
+    script levelobject_setup
+        printf "omg2! woohoo!"
+        Obj_EnableAmbientLight index = 0
+        Obj_EnableAmbientLight index = 1
+    endscript
+    
 	script gameobj_add_components
 		if GotParam animName
 			CreateComponentFromStructure component = animation <...>
@@ -14,10 +23,12 @@
 		endif
 		if (<is_level_obj> = 1)
 			CreateComponentFromStructure component = model <...>
+            CreateComponentFromStructure component = shadow <...> ShadowType = detailed
 		else
 			if GotParam model
 				if NOT StringEquals a = <model> b = "none"
 					CreateComponentFromStructure component = model <...>
+                    CreateComponentFromStructure component = shadow <...> ShadowType = detailed
 				endif
 			endif
 		endif
@@ -62,7 +73,7 @@
 		endif
 		CreateComponentFromStructure component = model
 		if NOT GotParam ShadowOff
-			CreateComponentFromStructure component = shadow <...> ShadowType = simple
+			CreateComponentFromStructure component = shadow <...> ShadowType = detailed
 		endif
 	endscript
 	script ped_init_model

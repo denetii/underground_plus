@@ -169,7 +169,8 @@
         printf "UseDistanceClipping: %s" s = (<Value>)
         UGPlus_GetPerformanceOption { Setting = ClippingDistance }
         printf "ClippingDistance: %s" s = (<Value>)
-        UGPlus_SetOneButtonSpine enabled = 1
+        UGPlus_UpdateControlSettings
+        //UGPlus_SetOneButtonSpine enabled = 1
         // Set UG+ custom CAS items & levels here!
         set_custom_cas_items
 	endscript

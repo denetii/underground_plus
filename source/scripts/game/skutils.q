@@ -848,8 +848,9 @@
 	bouncy_composite_structure = [
 		{component = suspend}
 		{component = rigidbody}
-		{component = model}
+		{component = model UseModelLights}
 		{component = sound}
+        {component = shadow ShadowType = detailed}
 	]
 	particle_composite_structure = [
 		{component = suspend}

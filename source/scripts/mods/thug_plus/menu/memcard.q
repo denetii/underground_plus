@@ -2178,28 +2178,7 @@
 					cas_post_load
 				endif
 				printf current_theme_prefix
-                // Read and set the Underground+ control scheme preset
-				printf "Getting UG+ Control Scheme"
-				GetPreferenceString pref_type = splitscreen undergroundplus_controls
-				printf <ui_string>
-				if (<ui_string> = "PS2")
-					printf "Setting PS2"
-					Change undergroundplus_controls = CONTROL_SCHEME_PS2
-				else
-					printf "Setting Xbox"
-					Change undergroundplus_controls = CONTROL_SCHEME_XBOX
-				endif
-                // Read and set the Underground+ control scheme preset
-				printf "Getting UG+ Exit board setting"
-				GetPreferenceString pref_type = splitscreen undergroundplus_enable_exitboard
-				printf <ui_string>
-				if (<ui_string> = UNDERGROUNDPLUS_OPTION_ON)
-					printf "Setting ON"
-					Change undergroundplus_enable_exitboard = UNDERGROUNDPLUS_OPTION_ON
-				else
-					printf "Setting OFF"
-					Change undergroundplus_enable_exitboard = UNDERGROUNDPLUS_OPTION_OFF
-				endif
+                
 			case Park
 				SetCustomParkName Name = <Name>
 				SetParkName <Name>

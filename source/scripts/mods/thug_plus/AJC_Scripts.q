@@ -335,7 +335,7 @@
 	endscript
 	
 	script kskOffBoard_FromGround
-        if (UNDERGROUNDPLUS_ENABLE_EXITBOARD = UNDERGROUNDPLUS_OPTION_OFF)
+        if ( UNDERGROUNDPLUS_ENABLE_EXITBOARD = 0 )
             Goto OnGroundAi
         else
             ClearTrickQueue
