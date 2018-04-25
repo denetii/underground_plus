@@ -7833,6 +7833,7 @@
 		make_text_sub_menu_item text = "Snow mask Test" auto_id pad_choose_script = do_ksk_snowmask_test
 		make_text_sub_menu_item text = "Ice mask Test" auto_id pad_choose_script = do_ksk_icemask_test
 		make_text_sub_menu_item text = "Reset Weather Masks" auto_id pad_choose_script = do_ksk_weathermask_reset
+		make_text_sub_menu_item text = "Rebuild Shaders" auto_id pad_choose_script = do_ksk_rebuild_shaders
 		make_text_sub_menu_item text = "Done" id = menu_done pad_choose_script = create_pause_menu
 		RunScriptOnScreenElement id = current_menu_anchor animate_in params = {final_pos = (320.0,134.0)}
 	endscript
@@ -7850,6 +7851,9 @@
         UGPlus_SetMaterialMask type = Wet alpha = 0
         UGPlus_SetMaterialMask type = Snow alpha = 0
         UGPlus_SetMaterialMask type = Ice alpha = 0
+    endscript
+    script do_ksk_rebuild_shaders
+        UGPlus_RebuildShaders
     endscript
     
     script ksk_wetmask_test

@@ -99,6 +99,15 @@
     pp_ca_enabled = 1
     pp_ca_coeff = 0.12
     pp_ca_intensity = 0.15
+    
+    // -------------------------------------------------
+    // - SHADER CONSTANTS
+    // -------------------------------------------------
+    shader_bump_factor = 1.0
+    shader_water_factor = 1.0
+    shader_specular_factor = 1.0
+    shader_smoothness_factor = 1.0
+    
     // ******************************************************************
     
     
@@ -157,6 +166,8 @@
 				menu_title = "POSTPROCESS - TONEMAP"
 			case 15
 				menu_title = "POSTPROCESS - LENS DISTORTION"
+			case 16
+				menu_title = "SHADER CONSTANTS"
 			default
 				change current_lighting = 0
 				create_lighting_tool
@@ -331,6 +342,13 @@
 				make_light_tool_item text = "enabled" id = menu_pp_ca_enabled value = pp_ca_enabled pad_choose_script = pp_toggle_effect params = {name = LensDistortion menu_item = menu_pp_ca_enabled }
 				make_light_tool_item text = "coeff" id = menu_pp_ca_coeff value = pp_ca_coeff pad_choose_script = pp_incr_effect params = { min = -1.0 max = 1.0}
 				make_light_tool_item text = "intensity" id = menu_pp_ca_intensity value = pp_ca_intensity pad_choose_script = pp_incr_effect params = { max = 1.0}
+                
+			// SHADER CONSTANTS
+            case 16
+				make_light_tool_item text = "bump" id = menu_shader_bump value = shader_bump_factor pad_choose_script = shader_incr_constant params = { min = -2.0 max = 10.0}
+				make_light_tool_item text = "water" id = menu_shader_water value = shader_water_factor pad_choose_script = shader_incr_constant params = { min = -2.0 max = 10.0}
+				make_light_tool_item text = "specular" id = menu_shader_spec value = shader_specular_factor pad_choose_script = shader_incr_constant params = { min = -2.0 max = 10.0}
+				make_light_tool_item text = "smoothness" id = menu_shader_smooth value = shader_smoothness_factor pad_choose_script = shader_incr_constant params = { min = -2.0 max = 10.0}
             
 			default
 				change current_lighting = 0
@@ -458,7 +476,7 @@
 		get_level_light_values
 		launch_lighting_tool
 	endscript
-	script next_light max = 15
+	script next_light max = 16
 		if GotParam left
 			change current_lighting = (current_lighting - 1)
 		else
@@ -520,6 +538,63 @@
 		}
 	endscript
     
+    // ----------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------
+    script shader_incr_constant step = 0.01 max = 4 min = 0
+		GetTags
+		removeparameter random_effect_done
+		if GotParam reverse
+			step = (-1 * <step>)
+		endif
+		step = (<step> * step_multiplier)
+		switch <id>
+            // ****************************************
+			case menu_shader_bump
+				change shader_bump_factor = (shader_bump_factor + <step>)
+				if (shader_bump_factor > <max>)
+					change shader_bump_factor = <max>
+				endif
+				if (<min> > shader_bump_factor)
+					change shader_bump_factor = <min>
+				endif
+				FormatText TextName = value_text "%i" i = shader_bump_factor
+                UGPlus_SetShaderConstant { Name = Bump Value = (shader_bump_factor) }
+			case menu_shader_water
+				change shader_water_factor = (shader_water_factor + <step>)
+				if (shader_water_factor > <max>)
+					change shader_water_factor = <max>
+				endif
+				if (<min> > shader_water_factor)
+					change shader_water_factor = <min>
+				endif
+				FormatText TextName = value_text "%i" i = shader_water_factor
+                UGPlus_SetShaderConstant { Name = Water Value = (shader_water_factor) }
+			case menu_shader_spec
+				change shader_specular_factor = (shader_specular_factor + <step>)
+				if (shader_specular_factor > <max>)
+					change shader_specular_factor = <max>
+				endif
+				if (<min> > shader_specular_factor)
+					change shader_specular_factor = <min>
+				endif
+				FormatText TextName = value_text "%i" i = shader_specular_factor
+                UGPlus_SetShaderConstant { Name = Specular Value = (shader_specular_factor) }
+			case menu_shader_smooth
+				change shader_smoothness_factor = (shader_smoothness_factor + <step>)
+				if (shader_smoothness_factor > <max>)
+					change shader_smoothness_factor = <max>
+				endif
+				if (<min> > shader_smoothness_factor)
+					change shader_smoothness_factor = <min>
+				endif
+				FormatText TextName = value_text "%i" i = shader_smoothness_factor
+                UGPlus_SetShaderConstant { Name = Smoothness Value = (shader_smoothness_factor) }
+        endswitch
+		SetScreenElementProps id = {<id> child = 0} text = <value_text>
+        
+    endscript
+    // ----------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------
     // ----------------------------------------------------------------------------------------------
     // ----------------------------------------------------------------------------------------------
     script pp_incr_effect step = 0.01 max = 2 min = 0
